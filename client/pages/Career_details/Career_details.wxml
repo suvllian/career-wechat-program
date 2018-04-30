@@ -1,0 +1,40 @@
+<!--pages/Career_details/Career_details.wxml-->
+<view class='top'> <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" mode='aspectFit'/> 
+</view>
+<view class='main'>
+  <view class='introduction'> 
+    <view class='block'>
+        <view class='title'> 基本信息</view>
+        <view class='icon'><image src='../../images/less.png' mode='scaleToFill'></image>
+        </view>
+    </view>
+    <view class='hr'></view>
+    <view class='box'> 
+        <view class='left'><image src='../../images/user.jpeg' mode='scaleToFill'></image></view>
+        <view class='right'>
+            <view class='name'>职业名称：国际注册机械工程师</view>
+            <view class='p_name'>所属专业：机械 </view>
+            <view class='pover'>核心能力：技能及管理能力 </view>
+        </view>
+    </view>
+  </view>
+  <view class='block'>
+      <view class='title'> 职业介绍</view>
+      <view class='icon'><image src='../../images/less.png' mode='scaleToFill'></image></view>
+  </view>
+  <view class='hr'>  </view>
+  <view class='text_info'>国际注册机械工程师资格认证(ICME)是由机械工程师学会(IME)开展的专业工程师资格认    证，国际注机械工程师学会Logo机械工程师学会Logo册机械工程师资格认证体系通过统一资格考试、面试、专业能力评    估、  业绩考核、行业权威人士推荐和同行评议相结合等多种方式对专业技术人员进行评价。属于国际同行认可的技术     (或从业)资格认证。 
+  </view>
+
+  <view class='block'>
+      <view class='title'> 职业发展路径</view>
+      <view class='icon'><image src='../../images/less.png' mode='scaleToFill'></image></view>
+  </view>
+  <view class='hr'>  </view>
+  <view class='text_info'>国际注册机械工程师资格认证(ICME)是由机械工程师学会(IME)开展的专业工程师资格认    证，国际注机械工程师学会Logo机械工程师学会Logo册机械工程师资格认证体系通过统一资格考试、面试、专业能力评    估、  业绩考核、行业权威人士推荐和同行评议相结合等多种方式对专业技术人员进行评价。属于国际同行认可的技术     (或从业)资格认证2。 
+  </view>
+</view>
+
+<view class='bottom' bindtap="toDiscuss">
+<view class='bottom_info' ><image  src='../../images/talk.jpg'></image></view>
+</view>

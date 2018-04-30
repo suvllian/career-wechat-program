@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/article-list/index",
+    "pages/article/index",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/questionnaire/questionnaire",
+    "pages/publish/publish",
+    "pages/indexcs/indexcs",
+    "pages/person/person",
+    "pages/Career_details/Career_details",
+    "pages/mine_publish/mine_publish",
+    "pages/my_publish_in/my_publish_in",
+    "pages/career/career"
+  ],
+  "window": {
+    "backgroundColor": "#F5F5F5",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "职页",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#11B4AF",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#1296DB",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home2.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "pagePath": "pages/article-list/index",
+        "text": "讨论区",
+        "iconPath": "images/discuss2.png",
+        "selectedIconPath": "images/discuss.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine2.png",
+        "selectedIconPath": "images/mine.png"
+      }
+    ]
+  }
+}

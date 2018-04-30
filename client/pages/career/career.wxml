@@ -1,0 +1,3 @@
+
+
+<button bindtap="toDetail">机械</button>

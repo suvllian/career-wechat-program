@@ -1,0 +1,11 @@
+<!--pages/publish/publish.wxml-->
+<view class="di_c">
+ <input class="discuss_content_tilte" placeholder="请输入标题...">
+  </input>
+
+  <textarea class="discuss_content" placeholder="请输入问题...">
+
+  </textarea>
+  <button class="submit"class="submit">发起讨论</button>
+</view>
+

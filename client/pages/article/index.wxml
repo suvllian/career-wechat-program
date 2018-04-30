@@ -1,0 +1,78 @@
+<!--pages/discuss/discuss.wxml-->
+<view class="floor1">
+  <view class="applebox">
+    <view class="top">
+      <text class="top_title">乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家</text>
+      <view class='top_hr'></view>
+      <view class='top_info'>乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家</view>
+      <view class='bottom_hr'></view>
+      <view class='bottom_info'>昨天10：20|XXXX发表</view>
+    </view>
+  </view>
+</view>
+<view class="order">
+  <span style="white-space:pre;"> </span>
+  <span class="line"></span>
+  <span style="white-space:pre;"> </span>
+  <span class="txt">讨论区</span>
+  <span style="white-space:pre;"> </span>
+  <span class="line"></span>
+</view>
+<view class='answer'>
+
+  <view class='publish'>
+    <view class="publish_image_info">
+      <image src='../../images/ping.png'></image>
+    </view>
+    <view class='image_text'>3 </view>
+    <view style='padding-left:5rpx;margin-top: 17rpx;margin-left:30rpx;'>条评论</view>
+  </view>
+  <textarea class="discuss_content" placeholder="我也来说几句..."></textarea>
+  <button class="submit" class="submit">发布</button>
+
+  <view class='content_infos' wx:for="{{content}}">
+    <view class='answer_hr'></view>
+    <view id='content'>
+      <view class='main_top'>
+        <view class='top_left'>
+          <image src="{{item.image}}"></image>
+        </view>
+        <view class='top_right'>
+          <view class='content_name'>{{item.name}}</view>
+          <view class='content_time'>{{item.time}}</view>
+        </view>
+        <view class='tanchu' bindtap="modalinput">回复</view>
+      </view>
+      <view class='content_info'>{{item.content_info}}</view>
+      <view class='Sub_comments'>
+        <view class='sub_details'>
+          <view class='sub_info'>
+            <span style="color:blue;">XXXX：</span>你的评论也很赞赞赞赞赞赞赞赞赞赞赞赞赞赞赞
+          </view>
+          <view class='sub_info'>
+            <span style="color:blue;">XXXX：</span>你的评论也很赞
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class='content_hr'></view>
+</view>
+
+
+
+
+
+<modal hidden="{{hiddenmodalput}}" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <input type='text' name="shuru" placeholder="{{error}}" focus="{{focus}}" bindblur='input' />
+
+</modal>
+
+<view class="modal_box" hidden="{{modalFlag}}" bindtap="close">
+  <view class="modal">
+    <text id="commend">交流成功</text>
+    <text class="words">交流发布成功</text>
+    <text class="words">期待您下一次的讨论</text>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/anwser/anwser.wxml-->
+<view id="body">
+  <view>
+    <text class="date">昨天</text>
+    <view>
+      <view class="article-box" wx:for="{{articles}}" wx:for-index="idx" wx:key="idx">
+        <navigator url="/pages/article/index">
+          <view class="article-inner">
+            <text class="title">{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="add-btn">
+    <navigator url="/pages/publish/publish">
+      <image src="../../images/+.png" class="add-img"></image>
+    </navigator>
+  </view>
+</view>

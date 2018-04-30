@@ -1,0 +1,90 @@
+/* pages/index/index.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color:#F5F5F5;
+}
+
+.main{
+}
+/*轮播图*/
+.swiper{
+  width: 100%;
+  height: 350rpx;
+}
+.slide-image{
+  width:100%;
+  height: 100%;
+}
+/*八大职业*/
+.column{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+ 
+}
+.profession{
+  flex-direction:colunmn;
+   margin:20rpx 0rpx 20rpx 70rpx; 
+   
+}
+.image-info image{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.text-info{
+  font-size: 25rpx;
+  text-align: center;
+}
+/*分割线*/
+.hr{
+  margin:20rpx;
+}
+.block{
+  background-color: white;
+}
+/*内推top5*/
+.top5{
+display: flex;
+flex-direction: row;
+padding: 20rpx 0  20rpx 30rpx;
+height: 50rpx;
+}
+.title1{
+  font-weight: 580;
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+.icon_font{
+  font-weight: bold;
+  position: absolute;
+  right: 30rpx;  
+  line-height: 50rpx;
+}
+.box2{
+  padding-top:20rpx;
+  padding-bottom: 15rpx;
+}
+.list{
+  padding: 30rpx 30rpx  30rpx 30rpx;
+  font-size: 35rpx;
+  line-height: 35rpx;
+  display: flex;
+  flex-direction: row;
+}
+.hr2{
+  border: 1px solid #F5F5F5;
+}
+.tilte3{
+  width:690rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+}
+/*进入图标*/
+.list:active{
+            opacity: 1;
+            transform: scale(0.9);
+}

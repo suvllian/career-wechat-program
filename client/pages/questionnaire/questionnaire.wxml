@@ -1,0 +1,5 @@
+<radio-group class="radio-group" bindchange="radioChange">  
+  <label class="radio" wx:for="{{k7}}" wx:key="index">  
+    <radio value="{{item.arr_guige02}}" bindtap='radio' data-id="{{item.guige_key02}}" checked="{{item.checked}}"/>{{item.arr_guige02}}  
+  </label>  
+</radio-group>  

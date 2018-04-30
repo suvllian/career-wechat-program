@@ -1,0 +1,42 @@
+<!--pages/discuss/discuss.wxml-->
+<view id="body">
+  <view class="head">
+      <text class="text-center">前端交流</text>
+  </view>
+  <view id="content">
+    <view class="Fuser1">
+      <view class="content_us">
+        <image src='../../images/user.jpeg' class="avatar"></image>
+        <text class="user_name">洛琳林</text>
+        <text class="user_comment">现在发现孩子兴趣培养至关重要呀！</text>
+      </view>
+       <view class="box">
+        <image src="../../images/d_zan2.png"class="d_zan"></image>
+        <text class="anwser">回复</text>
+        <text class="time">昨天17:23</text>
+       </view>
+      
+    </view>
+     <view class="Fuser1">
+      <view class="content_us">
+        <image src='../../images/user.jpeg' class="avatar"></image>
+        <text class="user_name">洛琳林</text>
+        <text class="user_comment">现在发现孩子兴趣培养至关重要呀！</text>
+      </view>
+       <view class="box">
+        <image src="../../images/d_zan2.png"class="d_zan"></image>
+        <text class="anwser"bindtap="anwserT">回复</text>
+        <text class="time">昨天17:23</text>
+       </view>
+      </view>
+  </view>
+  
+</view>
+<view class="modal_box" wx:if="{{modalFlag}}"bindtap="close">
+    
+  <view class="modal">
+      <text id="commend">交流成功</text>
+      <text class="words">交流发布成功</text>
+      <text class="words">期待您下一次的讨论</text>
+  </view>
+</view>

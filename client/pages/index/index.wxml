@@ -1,0 +1,127 @@
+<!-- 轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper'>
+  <block wx:for="{{imgUrls}}" >
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"  />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 八大行业 -->
+<view class='box'>
+
+  <view class='column'>
+    <view class='profession' bindtap="toDetail">
+      <view class='image-info'><image src='../../images/mechanical.png' mode='aspectFit'/> </view>
+      <view class='text-info'>机械</view>
+    </view>  
+    <view class='profession'>
+      <view class='image-info'><image src='../../images/mechanical.png' mode='aspectFit'/> </view>
+      <view class='text-info'>机械</view>
+    </view>
+    <view class='profession'>
+      <view class='image-info'><image src='../../images/mechanical.png' mode='aspectFit'/> </view>
+      <view class='text-info'>机械</view>
+    </view>
+    <view class='profession'>
+      <view class='image-info'><image src='../../images/mechanical.png' mode='aspectFit'/> </view>
+      <view class='text-info'>机械</view>
+    </view>
+  </view>
+
+  <view class='column'>
+    <view class='profession'>
+      <view class='image-info'><image src='../../images/mechanical.png' mode='aspectFit'/> </view>
+      <view class='text-info'>机械</view>
+    </view>  
+    <view class='profession'>
+      <view class='image-info'><image src='../../images/mechanical.png' mode='aspectFit'/> </view>
+      <view class='text-info'>机械</view>
+    </view>
+    <view class='profession'>
+      <view class='image-info'><image src='../../images/mechanical.png' mode='aspectFit'/> </view>
+      <view class='text-info'>机械</view>
+    </view>
+    <view class='profession'>
+      <view class='image-info'><image src='../../images/mechanical.png' mode='aspectFit'/> </view>
+      <view class='text-info'>机械</view>
+    </view>
+  </view>
+  
+</view>
+<view class='main'>
+<view class='hr'>
+</view>
+<!-- 内推top5 -->
+<view class='block'> 
+  <view class='top5'>
+    <view class='title1'><span style="color:red;padding-right:10rpx;">#</span> 内推热门TOP5</view>
+    <view class='icon_font'> ></view>
+
+  </view>
+
+  <view class='hr2'></view>
+     <view class='box2'>
+      <view class='list'  wx:for="{{content_top5}}"> 
+          <view class='tilte3'>#{{item.text_info}} </view>
+          <view class='enter'># </view>
+      </view>      
+    </view>
+</view>
+
+
+<view class='hr'></view>
+<!-- hot热门 -->
+<view class='block'> 
+    <view class='top5'>
+      <view class='title1'><span style="color:red;padding-right:10rpx;">#</span> 热门讨论话题</view>
+      <view class='icon_font'> ></view>
+
+   </view>
+
+    <view class='hr2'></view>
+     <view class='box2' >
+       <view class='list'wx:for="{{content_hot}}"> 
+          <view class='tilte3'>#{{item.text_info}} </view>
+          <view class='enter'># </view>
+        </view>      
+     </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+

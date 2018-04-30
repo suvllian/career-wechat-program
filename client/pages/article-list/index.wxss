@@ -1,0 +1,41 @@
+#body {
+  width: 100%;
+  min-height: 600rpx;
+  padding: 50rpx 0;
+}
+
+.article-box {
+  height: auto;
+  width: 94%;
+  margin: 20rpx auto 30rpx;
+  border: 1px solid transparent;
+  border-radius: 5rpx;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.article-inner {
+  width: 100%;
+  padding: 40rpx 30rpx;
+}
+
+.title {
+  font-size: 32rpx;
+}
+
+.date {
+  font-size: 42rpx;
+  font-weight: 500;
+  margin-left: 24rpx;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+
+.add-img {
+  width: 80rpx;
+  height: 80rpx;
+}

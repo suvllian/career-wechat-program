@@ -1,0 +1,25 @@
+/* pages/publish/publish.wxss */
+.discuss_content{
+  width:80%;
+  height:500rpx;
+  background-color:#ccc;
+  margin: 20rpx auto;
+  padding:50rpx;
+  border-radius:5px;
+  color:#fff;
+}
+.discuss_content_tilte{
+  width:80%;
+  height:100rpx;
+  background-color:#ccc;
+  margin: 20rpx auto;
+  padding:20rpx 50rpx;
+  border-radius:5px;
+  color:#fff;
+}
+.submit{
+  width:80%;
+  margin-top:40rpx;
+  background-color:#878787;
+  color:#fff;
+}

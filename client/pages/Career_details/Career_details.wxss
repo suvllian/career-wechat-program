@@ -1,0 +1,73 @@
+/* pages/Career_details/Career_details.wxss */
+page{
+height: 100%;
+width:100%;
+background-color:#F5F5F5;
+}
+.top image{
+  width: 100%;
+}
+.main{
+  margin: 30rpx 50rpx 0rpx 50rpx;
+}
+.title{
+  font-size: 35rpx;
+  color:#2b4490;
+  font-weight: bold;
+}
+.hr{
+  border: 1rpx solid #2b4490;
+  margin-top: 20rpx;
+  margin-bottom: 5rpx;
+}
+.icon image{
+  width: 55rpx;
+  height: 55rpx;
+  position: absolute;
+  right: 50rpx;
+}
+.block{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.text_info{
+font-size: 35rpx;
+text-indent: 2em;
+}
+.box{
+display: flex;
+flex-direction: row;
+margin-top: 20rpx;
+}
+.left image{
+width: 200rpx;
+height: 200rpx;
+}
+.right{
+display: flex;
+flex-direction: column;
+font-size: 30rpx;
+padding-left: 50rpx;
+}
+.name{
+  padding-top:30rpx;
+}
+.p_name{
+  padding-top:20rpx;
+}
+.pover{
+  padding-top:20rpx;
+}
+.bottom{
+  position: fixed;
+  bottom: 0rpx;
+  height: auto;
+  width: 100%;
+}
+.bottom_info image{
+  width: 125rpx;
+  height: 125rpx;
+  float: right;
+  padding: 0rpx 25rpx 25rpx 0;
+}
