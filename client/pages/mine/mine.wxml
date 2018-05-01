@@ -1,80 +1,67 @@
 <!--pages/mine/mine.wxml-->
 <view class="body">
   <view id="usr_mess">
-    <image src="../../images/user.jpeg" class="avatar"></image>
-    <text class="usr_name">洛琳林</text>
+    <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+    <text class="usr_name">{{userInfo.nickName}}</text>
   </view>
   <view class="f1">
-    <view class="odd clear"bindtap='toPerson'>
+    <view class="panel" bindtap='toPerson'>
       <view class="left">
-        <image src="../../images/person_id.png" class="dd"></image>
+        <image src="../../images/person_id.png" class="small-icon"></image>
         <text class="person_mes">个人信息</text>
       </view>
       <view class="right">
-        <text class="person_mes_num">0</text>
         <text class="icon_font">></text>
       </view>
     </view>
-   <view class="even clear">
-    <view class="left">
-      <image src="../../images/target.png" class="dd"></image>
-      <text class="person_mes">我的求职</text>
-    </view>
-    <view class="right">
-      <text class="person_mes_num">0</text>
-      <text class="icon_font">></text>
-    </view>
-   </view>
-  </view>
-     <view class="f2">
-    <view class="odd clear" bindtap='tomy_publish_in'>
+    <view class="panel">
       <view class="left">
-        <image src="../../images/recommend.png" class="dd"></image>
+        <image src="../../images/target.png" class="small-icon"></image>
+        <text class="person_mes">我的求职</text>
+      </view>
+      <view class="right">
+        <text class="icon_font">></text>
+      </view>
+    </view>
+  </view>
+  <view class="f2">
+    <view class="panel" bindtap='tomy_publish_in'>
+      <view class="left">
+        <image src="../../images/recommend.png" class="small-icon"></image>
         <text class="person_mes">我的内推</text>
       </view>
       <view class="right">
-        <text class="person_mes_num">0</text>
         <text class="icon_font">></text>
       </view>
     </view>
-   <view class="even clear" bindtap='tomine_publish'>
-    <view class="left">
-      <image src="../../images/passage.png" class="dd"></image>
-      <text class="person_mes">我的帖子</text>
+    <view class="panel" bindtap='tomine_publish'>
+      <view class="left">
+        <image src="../../images/passage.png" class="small-icon"></image>
+        <text class="person_mes">我的帖子</text>
+      </view>
+      <view class="right">
+        <text class="icon_font">></text>
+      </view>
     </view>
-    <view class="right">
-      <text class="person_mes_num">0</text>
-      <text class="icon_font">></text>
-    </view>
-   </view>
   </view>
   <view class="f3">
-    <view class="odd clear" bindtap="about">
+    <view class="panel" bindtap="about">
       <view class="left">
-        <image src="../../images/gy.png" class="dd"></image>
+        <image src="../../images/gy.png" class="small-icon"></image>
         <text class="person_mes">关于</text>
       </view>
       <view class="right">
-        <text class="person_mes_num">0</text>
         <text class="icon_font">></text>
       </view>
     </view>
-   <view class="even clear">
-    <view class="left">
-      <image src="../../images/setting.png" class="dd"></image>
-      <text class="person_mes">设置</text>
+    <view class="panel">
+      <view class="left">
+        <image src="../../images/setting.png" class="small-icon"></image>
+        <text class="person_mes">设置</text>
+      </view>
+      <view>
+        <text class="icon_font">></text>
+      </view>
     </view>
-    <view class="right">
-      <text class="person_mes_num">0</text>
-      <text class="icon_font">></text>
-    </view>
-   </view>
-  </view>
-</view>
-<view class="modal_box" wx:if="{{modalAboutFlag}}"bindtap="closeAbout">
-    
-  <view class="modal">
-      <text id="commend">关于我们</text>
-      <text class="words">职页有限公司</text>
   </view>
 </view>

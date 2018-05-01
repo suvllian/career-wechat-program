@@ -1,62 +1,29 @@
-.person{
-  background-color:#f5f5f5;
-  width: 90%;
-  margin: 0 auto;
- 
+.person {
+  padding: 0 5%;
 }
-#person_box{
-  background-color:#fff;
-  border-top:1rpx solid transparent;
+
+.avatar {
+  width: 250rpx;
+  margin: 30rpx auto;
+  height: 250rpx;
+  border-radius: 5rpx;
+  display: block;
 }
-.avatar{
- 
-  width:250rpx;
-  margin:30rpx auto;
-  height:250rpx;
-  border-radius:5rpx;
-  display:block;
+
+.usrname {
+  color: #000;
+  display: block;
+  text-align: center;
+  padding-bottom: 20rpx;
 }
-.usrname{
-  color:#000;
-  font-weight: bold;
-  font-family: "MIcrosoftyahei";
-  display:block;
-  text-align:center;
-  padding-bottom:20rpx;
-}
-.flor1{
-   margin-top:5rpx;
-   border-top:1rpx solid transparent;
-   background-color:#Fff;
-}
-#bot_box{
-  margin-top:40rpx;
-  background-color:#f5f5f5;
-}
-.clear::after{
-  content:'';
-  clear:both;
-  display:table;
-}
-.left{
-  float:left;
-}
-.right{
-  float:right;
-}
-.name{
-  padding-top:40rpx; 
-  padding-bottom:40rpx;
-}
-.pick{
-  margin-top:40rpx;
-}
-.icon_sex{
-  vertical-align: middle;margin-left:20rpx;
-}
-.confirm{
-  background-color:#11B4AF;
-  color:#fff;
-  padding:5rpx 10rpx;
-  border-radius:5rpx;
+
+.info-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25rpx 0;
+  margin-top: 5rpx;
+  font-size: 26rpx;
+  background-color: #fff;
+  border-top: 1rpx solid transparent;
 }

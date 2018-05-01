@@ -5,16 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    sexFlag:false,
-    array:["帅哥","美女"],
-    index:0,
+    userInfo: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const that = this
 
+    wx.getUserInfo({
+      success: function (res) {
+        const { userInfo } = res
+
+        that.setData({
+          userInfo
+        })
+      }
+    })
   },
 
   /**
@@ -57,23 +65,5 @@ Page({
    */
   onReachBottom: function () {
 
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-  oner:function(){
-    this.setData({sexFlag:true});
-  },
-  onConfirm:function(){
-    this.setData({ sexFlag:false });
-  },
-  bindPickerChange: function (e) {
-    this.setData({
-      index: e.detail.value
-    })
-  },
+  }
 })

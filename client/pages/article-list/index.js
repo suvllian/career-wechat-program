@@ -1,4 +1,3 @@
-// pages/anwser/anwser.js
 const config = require("../../config.js")
 
 Page({

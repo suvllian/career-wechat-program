@@ -1,6 +1,8 @@
-// pages/discuss/discuss.js
+const config = require("../../config.js")
+
 Page({
   data: {
+    article: {},
     hiddenmodalput: true, 
     focus: false,
     modalFlag:true,
@@ -18,7 +20,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    // 获取文章内容
+    this.getContent(options.id)
+    // 获取评论内容
+
   },
 
   /**
@@ -34,6 +39,24 @@ Page({
   onShow: function () {
     
 
+  },
+  // 获取文章内容
+  getContent: function(id) {
+    const that = this
+
+    wx.request({
+      url: `${config.service.specialArticleUrl}?id=${id}`,
+      success: function (res) {
+        const { data } = res
+
+        that.setData({
+          article: data.data && data.data[0]
+        })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
   },
   input: function (e) {
     this.setData({

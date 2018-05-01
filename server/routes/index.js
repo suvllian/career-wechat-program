@@ -34,4 +34,6 @@ router.post('/message', controllers.message.post)
 router.get('/profession',controllers.profession)
 // 文章列表
 router.get('/article', controllers.article)
+// 具体文章内容
+router.get('/specialArticle', controllers.specialArticle)
 module.exports = router

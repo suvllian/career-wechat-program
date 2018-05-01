@@ -1,13 +1,13 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/person/person",
+    "pages/mine/mine",
     "pages/article-list/index",
     "pages/article/index",
-    "pages/index/index",
-    "pages/mine/mine",
     "pages/questionnaire/questionnaire",
     "pages/publish/publish",
     "pages/indexcs/indexcs",
-    "pages/person/person",
     "pages/Career_details/Career_details",
     "pages/mine_publish/mine_publish",
     "pages/my_publish_in/my_publish_in",

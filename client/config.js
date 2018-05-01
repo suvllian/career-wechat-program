@@ -25,7 +25,10 @@ var config = {
     professionUrl: `${host}/weapp/profession`,
 
     // 获取贴子列表
-    articlesUrl: `${host}/weapp/article`
+    articlesUrl: `${host}/weapp/article`,
+
+    // 贴子具体内容
+    specialArticleUrl: `${host}/weapp/specialArticle`,
   }
 };
 

@@ -2,9 +2,9 @@
 <view class="floor1">
   <view class="applebox">
     <view class="top">
-      <text class="top_title">乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家</text>
+      <text class="top_title">{{article.title}}</text>
       <view class='top_hr'></view>
-      <view class='top_info'>乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家乐视网：腾讯,京东,苏宁体育,TCL等有意投资新乐视智家</view>
+      <view class='top_info'>{{article.content}}</view>
       <view class='bottom_hr'></view>
       <view class='bottom_info'>昨天10：20|XXXX发表</view>
     </view>

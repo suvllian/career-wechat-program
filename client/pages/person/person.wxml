@@ -1,41 +1,24 @@
 <view class="person">
- <view id="person_box">
-    <image src="../../images/user.jpeg"class="avatar"></image>
-    <view class="usrname">洛琳林</view>
+  <view id="person_box">
+    <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+    <view class="usrname">{{userInfo.nickName}}</view>
   </view>
-  <view id="bot_box">
-    <view class="flor1 clear">
-      <view class="name left">姓名</view>
-      <view class="name right">某**</view>
+  <view>
+    <view class="info-panel">
+      <view>姓名</view>
+      <view>某**</view>
     </view>
-    <view class="flor1 clear">
-      <view class="name left">手机号</view>
-      <view class="name right">135**********</view>
+    <view class="info-panel">
+      <view>手机号</view>
+      <view>135**********</view>
     </view>
-    <view class="flor1 clear">
-    <view class="name left">微信号</view>
-      <view class="name right">wx****</view>
+    <view class="info-panel">
+      <view>微信号</view>
+      <view>{{userInfo.nickName}}</view>
     </view>
-    <view class="flor1 clear">
-      <view class="name left"wx:if="{{!sexFlag}}">性别</view>
-      <view class="left">
-         <picker class="pick" wx:if="{{sexFlag}}"bindchange="bindPickerChange"              value="{{index}}" range="{{array}}">
-          <view class="picker">
-        当前选择：{{array[index]}}
-          </view>
-          </picker>
-       </view>
-      
-      <view class="right clear name">
-        <view wx:if='{{sexFlag}}'>
-
-            <view bindtap="onConfirm" class="confirm">确定</view>
-        </view>
-        <view  bindtap='oner'wx:if="{{!sexFlag}}">{{array[index]}}<icon type="success" class="icon_sex"></icon></view>
-        
-       </view>
-      
+    <view class="info-panel">
+      <view>性别</view>
+      <view>{{userInfo.gender === 1 ? '男' : '女'}}</view>
     </view>
-        
   </view>
 </view>
