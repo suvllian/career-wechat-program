@@ -8,6 +8,7 @@
 
 #usr_mess {
   width: 100%;
+  min-height: 80rpx;
   padding: 50rpx 0;
   color: #000;
   background-color: #fff;

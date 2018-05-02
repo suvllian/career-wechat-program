@@ -44,24 +44,4 @@
       </view>
     </view>
   </view>
-  <view class="f3">
-    <view class="panel" bindtap="about">
-      <view class="left">
-        <image src="../../images/gy.png" class="small-icon"></image>
-        <text class="person_mes">关于</text>
-      </view>
-      <view class="right">
-        <text class="icon_font">></text>
-      </view>
-    </view>
-    <view class="panel">
-      <view class="left">
-        <image src="../../images/setting.png" class="small-icon"></image>
-        <text class="person_mes">设置</text>
-      </view>
-      <view>
-        <text class="icon_font">></text>
-      </view>
-    </view>
-  </view>
 </view>

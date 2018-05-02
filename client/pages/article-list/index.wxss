@@ -8,23 +8,21 @@
   height: auto;
   width: 94%;
   margin: 20rpx auto 30rpx;
-  border: 1px solid transparent;
   border-radius: 5rpx;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 5rpx 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
 
 .article-inner {
-  width: 100%;
-  padding: 40rpx 30rpx;
+  padding: 30rpx;
 }
 
 .title {
-  font-size: 32rpx;
+  font-size: 28rpx;
 }
 
 .date {
-  font-size: 42rpx;
+  font-size: 40rpx;
   font-weight: 500;
   margin-left: 24rpx;
 }
@@ -36,6 +34,6 @@
 }
 
 .add-img {
-  width: 80rpx;
-  height: 80rpx;
+  width: 60rpx;
+  height: 60rpx;
 }

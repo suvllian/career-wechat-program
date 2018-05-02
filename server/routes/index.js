@@ -32,6 +32,9 @@ router.get('/message', controllers.message.get)
 router.post('/message', controllers.message.post)
 // zlf
 router.get('/profession',controllers.profession)
+
+// 添加文章
+router.post('/addArticle', controllers.addArticle)
 // 文章列表
 router.get('/article', controllers.article)
 // 具体文章内容

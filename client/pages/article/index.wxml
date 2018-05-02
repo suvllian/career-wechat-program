@@ -1,38 +1,22 @@
-<!--pages/discuss/discuss.wxml-->
-<view class="floor1">
-  <view class="applebox">
-    <view class="top">
-      <text class="top_title">{{article.title}}</text>
-      <view class='top_hr'></view>
-      <view class='top_info'>{{article.content}}</view>
-      <view class='bottom_hr'></view>
-      <view class='bottom_info'>昨天10：20|XXXX发表</view>
-    </view>
+<view class="article">
+  <view class="article-container">
+    <view class="article-title">{{article.title}}</view>
+    <view class='article-content'>{{article.content}}</view>
+    <view class='article-info'>{{article.publishTime}}  |  {{article.nickName}}发表</view>
   </view>
 </view>
-<view class="order">
-  <span style="white-space:pre;"> </span>
-  <span class="line"></span>
-  <span style="white-space:pre;"> </span>
-  <span class="txt">讨论区</span>
-  <span style="white-space:pre;"> </span>
-  <span class="line"></span>
+
+<view class="gap-line">
+  <text class="gap-text">讨论区</text>
 </view>
-<view class='answer'>
 
-  <view class='publish'>
-    <view class="publish_image_info">
-      <image src='../../images/ping.png'></image>
-    </view>
-    <view class='image_text'>3 </view>
-    <view style='padding-left:5rpx;margin-top: 17rpx;margin-left:30rpx;'>条评论</view>
-  </view>
-  <textarea class="discuss_content" placeholder="我也来说几句..."></textarea>
-  <button class="submit" class="submit">发布</button>
+<view class='discuss-area'>
+  <view class='discuss-count'>3条评论</view>
+  <textarea class="discuss-content" placeholder="我也来说几句..."></textarea>
+  <button class="submit">发布</button>
 
-  <view class='content_infos' wx:for="{{content}}">
-    <view class='answer_hr'></view>
-    <view id='content'>
+  <view class='discuss-contents' wx:for="{{content}}">
+    <view class='discuss-block'>
       <view class='main_top'>
         <view class='top_left'>
           <image src="{{item.image}}"></image>
@@ -55,18 +39,11 @@
         </view>
       </view>
     </view>
-
   </view>
-  <view class='content_hr'></view>
 </view>
-
-
-
-
 
 <modal hidden="{{hiddenmodalput}}" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
   <input type='text' name="shuru" placeholder="{{error}}" focus="{{focus}}" bindblur='input' />
-
 </modal>
 
 <view class="modal_box" hidden="{{modalFlag}}" bindtap="close">

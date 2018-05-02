@@ -1,9 +1,32 @@
-<!--pages/anwser/anwser.wxml-->
 <view id="body">
-  <view>
+  <view wx:if="{{articles['today'].length > 0}}">
+    <text class="date">今天</text>
+    <view>
+      <view class="article-box" wx:for="{{articles['today']}}" wx:for-index="idx" wx:key="idx">
+        <navigator url="/pages/article/index?id={{item.id}}">
+          <view class="article-inner">
+            <text class="title">{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{articles['yesterday'].length > 0}}">
     <text class="date">昨天</text>
     <view>
-      <view class="article-box" wx:for="{{articles}}" wx:for-index="idx" wx:key="idx">
+      <view class="article-box" wx:for="{{articles['today']}}" wx:for-index="idx" wx:key="idx">
+        <navigator url="/pages/article/index?id={{item.id}}">
+          <view class="article-inner">
+            <text class="title">{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{articles['twoDays'].length > 0}}">
+    <text class="date">两天前</text>
+    <view>
+      <view class="article-box" wx:for="{{articles['today']}}" wx:for-index="idx" wx:key="idx">
         <navigator url="/pages/article/index?id={{item.id}}">
           <view class="article-inner">
             <text class="title">{{item.title}}</text>

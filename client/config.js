@@ -24,6 +24,9 @@ var config = {
 
     professionUrl: `${host}/weapp/profession`,
 
+    // 添加文章
+    addArticleUrl: `${host}/weapp/addArticle`,
+
     // 获取贴子列表
     articlesUrl: `${host}/weapp/article`,
 

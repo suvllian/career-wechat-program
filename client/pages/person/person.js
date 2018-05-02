@@ -1,4 +1,5 @@
-// pages/publish/publish.js
+var appInstance = getApp()
+
 Page({
 
   /**
@@ -12,16 +13,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const that = this
-
-    wx.getUserInfo({
-      success: function (res) {
-        const { userInfo } = res
-
-        that.setData({
-          userInfo
-        })
-      }
+    this.setData({
+      userInfo: appInstance.globalData.userInfo
     })
   },
 

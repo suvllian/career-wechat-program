@@ -1,4 +1,5 @@
 const config = require("../../config.js")
+import { formatTime } from "../../utils/util.js"
 
 Page({
   data: {
@@ -48,9 +49,11 @@ Page({
       url: `${config.service.specialArticleUrl}?id=${id}`,
       success: function (res) {
         const { data } = res
+        const article = data.data && data.data[0]
+        article.publishTime = formatTime(article.publish_time)
 
         that.setData({
-          article: data.data && data.data[0]
+          article
         })
       },
       fail: function (err) {
