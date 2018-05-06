@@ -1,21 +1,42 @@
 var appInstance = getApp()
-
+const config = require("../../config.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    nameFlag:true,
+    userInfo: {},
+    name:'',
+    phone:0,
+    wechatId:'wx',
+    gender:1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      userInfo: appInstance.globalData.userInfo
+    var that=this;
+    wx.request({
+      url: config.service.professionUrl,
+        data:appInstance.globalData.userInfo,
+        success:function(ctx){
+        console.log(ctx);
+        that.setData({
+          userInfo: appInstance.globalData.userInfo,
+          name: ctx.data.data[0].name,
+          phone: ctx.data.data[0].phone,
+          wechatId: ctx.data.data[0].wechatId,
+          gender: ctx.data.data[0].gender
+        })
+      },
+      fail:function(){
+
+      }
     })
+    
   },
 
   /**
@@ -58,5 +79,30 @@ Page({
    */
   onReachBottom: function () {
 
+  },
+  changeName:function(){
+      this.setData({
+        nameFlag:false
+      });
+  },
+  confirmName:function(e){
+    let newName=e.detail.value;
+    var that= this;
+      wx.request({
+        url:config.service.changeNameUrl ,
+        data:{
+          newName:newName,
+          nickName:appInstance.globalData.userInfo
+        },
+        success:function(ctx){
+          console.log(ctx);
+        //  that.setData({
+        //    name:ctx.data[0].name
+        //  })
+        },
+        fail:function(){
+
+        }
+      })
   }
 })

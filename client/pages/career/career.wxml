@@ -1,3 +1,36 @@
+<view class='box'>
+  <navigator url='../Career_details/Career_details'>
+    <view class='card'>
 
+      <view class='image_info'>
+        <image src='../../images/it2.jpg' mode='scaleToFill'></image>
+      </view>
+      <view class='text_info'>
+        <view class='font'>
+          <image src='../../images/career_font.png' mode='scaleToFill'></image>
+        </view>
+        <view class='number'>56446</view>
+        <view>人与你共同学习</view>
+        <view class='middle'>|</view>
+        <view class='right'>软件工程师</view>
+      </view>
+    </view>
+  </navigator>
+  <navigator url='../Career_details/Career_details'>
+    <view class='card'>
 
-<button bindtap="toDetail">机械</button>
+      <view class='image_info'>
+        <image src='../../images/it2.jpg' mode='scaleToFill'></image>
+      </view>
+      <view class='text_info'>
+        <view class='font'>
+          <image src='../../images/career_font.png' mode='scaleToFill'></image>
+        </view>
+        <view class='number'>56446</view>
+        <view>人与你共同学习</view>
+        <view class='middle'>|</view>
+        <view class='right'>点击查看详情</view>
+      </view>
+    </view>
+  </navigator>
+</view>

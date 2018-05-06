@@ -5,25 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    k7: [
-      { arr_guige02: 'USA', guige_key02: '美国' },
-      { arr_guige02: 'CHN', guige_key02: '中国', checked: 'true' },
-      { arr_guige02: 'BRA', guige_key02: '巴西' },
-    ]
+    
   }, 
-  radio: function (e) {
-    this.setData({
-      guige_key02: e.currentTarget.dataset.id
-    })
-    console.log(e.currentTarget.dataset.id)
-  },
+
   // 发货地址选择,获取用户选择的单选框的值  
-  radioChange: function (e) {
-    this.setData({
-      arr_guige02: e.detail.value
-    })
-    console.log(e.detail.value)
-  },  
 
 
   /**

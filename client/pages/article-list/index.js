@@ -14,6 +14,16 @@ Page({
     const that = this
 
     wx.request({
+      url: config.service.professionUrl,
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
+
+    wx.request({
       url: config.service.articlesUrl,
       success: function (res) {
         const { data } = res

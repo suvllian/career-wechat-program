@@ -21,8 +21,8 @@ var config = {
 
     // 上传图片接口
     uploadUrl: `${host}/weapp/upload`,
-
-    professionUrl: `${host}/weapp/profession`,
+    //获取个人信息
+    professionUrl: `${host}/weapp/usser`,
 
     // 添加文章
     addArticleUrl: `${host}/weapp/addArticle`,
@@ -32,6 +32,9 @@ var config = {
 
     // 贴子具体内容
     specialArticleUrl: `${host}/weapp/specialArticle`,
+     
+    //提交修改的信息
+    changeNameUrl: `${host}/weapp/changeName`
   }
 };
 

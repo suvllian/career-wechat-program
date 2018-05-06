@@ -43,5 +43,15 @@
         <text class="icon_font">></text>
       </view>
     </view>
+      <navigator url="/pages/questionnaire/questionnaire" class="panel">
+      <view class="left">
+        <image src="../../images/passage.png" class="small-icon"></image>
+        <text class="person_mes">霍兰德职业兴趣理论</text>
+      </view>
+      
+      <view class="right">
+        <text class="icon_font">></text>
+      </view>
+    </navigator>
   </view>
 </view>

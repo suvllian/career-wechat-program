@@ -1,0 +1,13 @@
+<view id="box">
+  <view class="career-panel">
+      <text class="panel-title">前端工程师</text>
+      <view class="content">
+        深圳资深前端工程师要求能力：node，vue，react，angular
+      </view>
+      <view class="info">
+        求职状态:<view class="right info-success">成功</view>
+      </view>
+      <text class="time">2018-02-27 18:00</text>
+  
+  </view>
+</view>

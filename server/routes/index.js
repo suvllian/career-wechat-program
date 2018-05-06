@@ -31,7 +31,7 @@ router.get('/message', controllers.message.get)
 // POST 用来处理微信转发过来的客服消息
 router.post('/message', controllers.message.post)
 // zlf
-router.get('/profession',controllers.profession)
+router.get('/usser',controllers.usser)
 
 // 添加文章
 router.post('/addArticle', controllers.addArticle)
@@ -39,4 +39,5 @@ router.post('/addArticle', controllers.addArticle)
 router.get('/article', controllers.article)
 // 具体文章内容
 router.get('/specialArticle', controllers.specialArticle)
+router.post("/changeName",controllers.changeName)
 module.exports = router

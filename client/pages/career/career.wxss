@@ -1,1 +1,42 @@
 /* pages/career/career.wxss */
+page{
+  height: 100%;
+   background-color:#F5F5F5;
+}
+.navigator-hover {
+   opacity: 1;
+   background-color: #F5F5F5;
+}
+.card{
+  width: 690rpx;
+  height: 400rpx;
+  margin: 50rpx 30rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx;
+}
+.image_info image{
+  width: 690rpx;
+  height: 300rpx;
+  border-radius: 20rpx 20rpx 0 0 ;
+}
+.text_info{
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+  color: #cdcdcd;
+  line-height: 80rpx;
+}
+.font image{
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 30rpx;
+  margin-right: 15rpx;
+}
+.number{
+  margin-right:5rpx
+}
+.middle{
+  margin: 0 100rpx;
+}

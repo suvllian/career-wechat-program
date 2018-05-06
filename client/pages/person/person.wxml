@@ -4,17 +4,18 @@
     <view class="usrname">{{userInfo.nickName}}</view>
   </view>
   <view>
-    <view class="info-panel">
+    <view class="info-panel"bindtap="changeName">
       <view>姓名</view>
-      <view>某**</view>
+      <view wx:if="{{nameFlag}}">{{name}}</view>
+      <input wx:if="{{!nameFlag}}" bindblur="confirmName"></input>
     </view>
     <view class="info-panel">
       <view>手机号</view>
-      <view>135**********</view>
+      <view>{{phone}}</view>
     </view>
     <view class="info-panel">
       <view>微信号</view>
-      <view>{{userInfo.nickName}}</view>
+      <view>{{wechatId}}</view>
     </view>
     <view class="info-panel">
       <view>性别</view>

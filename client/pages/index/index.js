@@ -7,20 +7,11 @@ Page({
    */
   data: {
     content_top5: [
-  { text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-  { text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-  { text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-  { text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
+  { id:'1',text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
+  { id: '2',text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
+  { id: '3',text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
+  { id: '4',text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
     ],
-    content_hot: [
-  { text_info:'如何深度思考你的职业生涯（原来很多人都被误导了）'},
-  { text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-  { text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-  { text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-  { text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-    
-    ],
-    
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -37,7 +28,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.request({
+      url: config.service.articlesUrl,
+      success:function(ctx){
+        console.log(ctx);
+      },
+      fail:function(){
+
+      }
+    })
   },
 
   /**
