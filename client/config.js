@@ -22,7 +22,7 @@ var config = {
     // 上传图片接口
     uploadUrl: `${host}/weapp/upload`,
     //获取个人信息
-    professionUrl: `${host}/weapp/usser`,
+    professionUrl: `${host}/weapp/getUserInfo`,
 
     // 添加文章
     addArticleUrl: `${host}/weapp/addArticle`,

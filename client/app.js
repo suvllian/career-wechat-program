@@ -7,7 +7,7 @@ App({
     userInfo: {}
   },
   onLaunch: function () {
-    qcloud.setLoginUrl(config.service.loginUrl)
+    
   },
   onShow: function () {
     const that = this
