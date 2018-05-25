@@ -9,50 +9,49 @@
 
 <!-- 八大行业 -->
 <view class='box'>
-
   <view class='column'>
     <view class='profession' bindtap="toDetail">
       <view class='image-info'>
-        <image src='../../images/mechanical.png' mode='aspectFit' /> </view>
-      <view class='text-info'>机械</view>
+        <image src='../../images/software.png' mode='aspectFit' /> </view>
+      <view class='text-info'>计算机</view>
     </view>
     <view class='profession'>
       <view class='image-info'>
-        <image src='../../images/mechanical.png' mode='aspectFit' /> </view>
-      <view class='text-info'>机械</view>
+        <image src='../../images/architec.png' mode='aspectFit' /> </view>
+      <view class='text-info'>建筑</view>
     </view>
     <view class='profession'>
       <view class='image-info'>
-        <image src='../../images/mechanical.png' mode='aspectFit' /> </view>
-      <view class='text-info'>机械</view>
+        <image src='../../images/sail.png' mode='aspectFit' /> </view>
+      <view class='text-info'>房地产</view>
     </view>
     <view class='profession'>
       <view class='image-info'>
-        <image src='../../images/mechanical.png' mode='aspectFit' /> </view>
-      <view class='text-info'>机械</view>
+        <image src='../../images/math.png' mode='aspectFit' /> </view>
+      <view class='text-info'>金融</view>
     </view>
   </view>
 
   <view class='column'>
     <view class='profession2'>
       <view class='image-info'>
-        <image src='../../images/mechanical.png' mode='aspectFit' /> </view>
-      <view class='text-info'>机械</view>
+        <image src='../../images/teacher.png' mode='aspectFit' /> </view>
+      <view class='text-info'>教育</view>
     </view>
     <view class='profession2'>
       <view class='image-info'>
-        <image src='../../images/mechanical.png' mode='aspectFit' /> </view>
-      <view class='text-info'>机械</view>
+        <image src='../../images/design.png' mode='aspectFit' /> </view>
+      <view class='text-info'>设计</view>
     </view>
     <view class='profession2'>
       <view class='image-info'>
-        <image src='../../images/mechanical.png' mode='aspectFit' /> </view>
-      <view class='text-info'>机械</view>
+        <image src='../../images/cars2.png' mode='aspectFit' /> </view>
+      <view class='text-info'>汽车</view>
     </view>
     <view class='profession2'>
       <view class='image-info'>
-        <image src='../../images/mechanical.png' mode='aspectFit' /> </view>
-      <view class='text-info'>机械</view>
+        <image src='../../images/news.png' mode='aspectFit' /> </view>
+      <view class='text-info'>新闻</view>
     </view>
   </view>
 
@@ -61,13 +60,9 @@
   <!-- 内推top5 -->
   <view class='block'>
     <view class='top5'>
-      <view class='title_image'>
-        <image src='../../images/top01.png'></image>
-      </view>
-      <view class='title1'> 内推热门TOP5</view>
+      <image src='../../images/top01.png' class='title_image'></image>
+      <view class='title1'> 热门帖TOP5</view>
     </view>
-
-    <view class='hr2'></view>
     <view class='box2'>
       <view class='list' wx:for="{{content_top5}}">
         <view class='tilte3'>{{item.id}}.{{item.text_info}} </view>
@@ -79,24 +74,20 @@
   <!-- hot热门 -->
   <view class='block'>
     <view class='top5'>
-      <view class='title_image'>
-        <image src='../../images/hot.png'></image>
-      </view>
+      <image src='../../images/hot.png' class='title_image'></image>
       <view class='title1'>热门内推职业</view>
     </view>
-
-    <view class='hr2'></view>
     <view class='box2'>
       <view class='block2'>
         <view class='card'>
           <view class='card_image_info'>
-            <image src='../../images/it2.jpg' mode='scaleToFill'></image>
+            <image src='../../images/career1.jpg'></image>
           </view>
           <view class='card_text_info'>软件工程师 </view>
         </view>
         <view class='card'>
           <view class='card_image_info'>
-            <image src='../../images/it2.jpg' mode='scaleToFill'></image>
+            <image src='../../images/career2.jpg'></image>
           </view>
           <view class='card_text_info'>软件工程师 </view>
         </view>
@@ -104,13 +95,13 @@
       <view class='block2'>
         <view class='card'>
           <view class='card_image_info'>
-            <image src='../../images/it2.jpg' mode='scaleToFill'></image>
+            <image src='../../images/career3.jpg'></image>
           </view>
           <view class='card_text_info'>软件工程师 </view>
         </view>
         <view class='card'>
           <view class='card_image_info'>
-            <image src='../../images/it2.jpg' mode='scaleToFill'></image>
+            <image src='../../images/career4.jpg'></image>
           </view>
           <view class='card_text_info'>软件工程师 </view>
         </view>

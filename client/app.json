@@ -1,19 +1,19 @@
 {
   "pages": [
+    "pages/gate/index",
     "pages/index/index",
-    "pages/gate/gate",
+    "pages/career/career",
+    "pages/questionnaire/questionnaire",
     "pages/mine/mine",
+    "pages/Career_details/Career_details",
     "pages/article-list/index",
     "pages/publish/publish",
     "pages/article/index",
     "pages/person/person",
     "pages/myCareer/myCareer",
-    "pages/questionnaire/questionnaire",
     "pages/indexcs/indexcs",
-    "pages/Career_details/Career_details",
     "pages/mine_publish/mine_publish",
-    "pages/my_publish_in/my_publish_in",
-    "pages/career/career"
+    "pages/my_publish_in/my_publish_in"
   ],
   "window": {
     "backgroundColor": "#F5F5F5",
@@ -23,27 +23,27 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#11B4AF",
+    "color": "#8a8a8a",
     "backgroundColor": "#ffffff",
-    "selectedColor": "#1296DB",
+    "selectedColor": "#11B4AF",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/home2.png",
-        "selectedIconPath": "images/home.png"
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home2.png"
       },
       {
         "pagePath": "pages/article-list/index",
         "text": "讨论区",
-        "iconPath": "images/discuss2.png",
-        "selectedIconPath": "images/discuss.png"
+        "iconPath": "images/discuss.png",
+        "selectedIconPath": "images/discuss2.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
-        "iconPath": "images/mine2.png",
-        "selectedIconPath": "images/mine.png"
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine2.png"
       }
     ]
   }

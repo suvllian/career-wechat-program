@@ -107,4 +107,7 @@
 
 .icon_font {
   font-size: 24rpx;
+  width:24rpx;
+  height:24rpx;
+  vertical-align:middle;
 }

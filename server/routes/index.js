@@ -50,6 +50,8 @@ router.post('/addArticle', controllers.article.addArticle)
 router.get('/article', controllers.article.getArticleList)
 // 具体文章内容
 router.get('/specialArticle', controllers.article.getSpecialArticle)
+// 获取我的帖子
+router.get('/getMyArticle', controllers.article.getMyArticle)
 
 
 module.exports = router

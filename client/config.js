@@ -26,15 +26,14 @@ var config = {
 
     // 添加文章
     addArticleUrl: `${host}/weapp/addArticle`,
-
     // 获取贴子列表
     articlesUrl: `${host}/weapp/article`,
-
     // 贴子具体内容
     specialArticleUrl: `${host}/weapp/specialArticle`,
+    // 获取我的帖子
+    getMyArticleUrl: `${host}/weapp/getMyArticle`
      
     //提交修改的信息
-    changeNameUrl: `${host}/weapp/changeName`
   }
 };
 

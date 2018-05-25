@@ -4,77 +4,114 @@ height: 100%;
 width:100%;
 background-color:#F5F5F5;
 }
-.top image{
-  width: 100%;
-  height: 500rpx;
-}
-.main{
-  margin: 30rpx 50rpx 100rpx 50rpx;
-
-}
-.title{
-  font-size: 35rpx;
-  color:#ff7f0f;
-  font-weight: bold;
+.box{
+  margin-bottom: 100rpx;
 }
 .hr{
-  border: 1rpx solid #ff7f0f;
-  margin-top: 20rpx;
-  margin-bottom: 5rpx;
-}
-.icon image{
-  width: 55rpx;
-  height: 55rpx;
-  position: absolute;
-  right: 50rpx;
-}
-.block{
-  display: flex;
-  flex-direction: row;
-  margin-top: 20rpx;
-}
-.text_info{
-  flex-direction: row;
-  margin-top: 20rpx;
-}
-.text_info{
-font-size: 28rpx;
-text-indent: 2em;
-line-height: 45rpx;
-}
-.box{
-display: flex;
-flex-direction: row;
-margin-top: 20rpx;
-}
-.left image{
-width: 200rpx;
-height: 200rpx;
-}
-.right{
-display: flex;
-flex-direction: column;
-font-size: 28rpx;
-margin-left: 50rpx;
-}
-.name{
-  padding-top:25rpx;
-}
-.p_name{
-  padding-top:25rpx;
-}
-.pover{
-  padding-top:25rpx;
-}
-.bottom{
-  position: fixed;
-  bottom: 0rpx;
-  height: auto;
+  transform: rotate(-11.2deg);
+  border-bottom:2px solid white; 
+  position: relative;
+  top: -84rpx;
   width: 100%;
 }
-.bottom_info image{
-  width: 60rpx;
-  height: 60rpx;
-  float: right;
-  margin: 0rpx 25rpx 25rpx 0;
+.top image{
+  width: 750rpx;
+  height: 500rpx;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  position: relative;
+}
+
+.head-portrait image{
+  width: 180rpx; 
+	height: 180rpx;
+	max-width: 100%; 
+  display: block;    
+  background-size: cover;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top: 380rpx;
+  left: 70rpx;
+  box-shadow: 0px 10px 90px 0px #999999;
+}
+.talk{
+  width: 60rpx; 
+	height: 60rpx;
+	max-width: 100%; 
+  display: block;    
+  background-size: cover;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #11B4AF;
+  position: absolute;
+  top: 320rpx;
+  left: 600rpx;
+  padding: 20rpx;
+  box-shadow: 0px 10px 80px 0px #999999;
+}
+.talk image{
+  width:60rpx;
+  height:60rpx;
+}
+.icon_font{
+  width: 50rpx; 
+	height:50rpx;
+	max-width: 100%; 
+  display: block;    
+  background-size: cover;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top: 360rpx;
+  left: 480rpx;
+   background-color: #11B4AF;
+   padding: 10rpx;
+   box-shadow: 0px 10px 80px 0px #999999;
+}
+.icon_font image{
+  width:50rpx;
+  height:50rpx;
+}
+.top_info{
+  display: flex;
+  flex-direction: column;
+  margin-left:450rpx;
+  margin-top: -50rpx;
+}
+.career_name{
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+.English{
+color:  #999999;
+font-size: 24rpx;
+padding-top: 15rpx;
+}
+.main{
+  width: 600rpx;
+  height: auto;
+  word-break:break-all;
+  margin: 20rpx auto;
+  padding: 30rpx;
+  font-size: 30rpx;
+  border: 1px solid transparent;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+.text_title{
+  font-size: 28rpx;
+}
+.text_info{
+ font-size: 25rpx;
+ text-indent: 2em;
+ padding-top: 10rpx;
+ line-height: 20px;
+}
+.navigator-hover{
+  opacity: 0.8;
 }

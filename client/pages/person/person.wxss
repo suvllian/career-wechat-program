@@ -1,29 +1,99 @@
 .person {
-  padding: 0 5%;
-}
+  background-color: #f5f5f5;
+  padding: 50rpx 20rpx;
 
-.avatar {
-  width: 250rpx;
-  margin: 30rpx auto;
-  height: 250rpx;
+}
+#person_box {
+  width: 80%;
+  height: 300rpx;
+  margin: 0 auto;
   border-radius: 5rpx;
-  display: block;
+  padding: 60rpx 10rpx 10rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 1rpx 2rpx 3rpx #ccc;
+    position:relative;
+ 
 }
 
-.usrname {
-  color: #000;
-  display: block;
+.a-box{
+  width:40%;
+  float:left;
+}
+.title{
+  font-weight:bold;
+  font-family:"MICROSOFT yahei";
+  font-size:32rpx;
+  display:block;
+  text-align:center;
+  margin-bottom:50rpx;
+}
+.usrname{
+  width:60%;
+  float:left;
+}
+.usrname .text {
+  height:150rpx;
+  line-height:150rpx;
+  color: #333;
+  font-weight: 500;
+  font-size: 40rpx;
   text-align: center;
-  padding-bottom: 20rpx;
+  display: block;
+}
+.my-inf{
+  display:block;
+  font-weight:normal;
+  color:#ccc;
+
+}
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  display: block;
+  margin:0 auto;
+  border: 2rpx solid #fff;
 }
 
 .info-panel {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25rpx 0;
-  margin-top: 5rpx;
+  padding: 25rpx 10rpx;
   font-size: 26rpx;
   background-color: #fff;
   border-top: 1rpx solid transparent;
+  width:80%;
+  margin:5rpx auto;
+  border-radius:5rpx;
+  box-sizing: border-box;
+}
+.btn{
+  background-color:rgba(0,0,255,.8);
+  width:250rpx;
+  height:70rpx;
+  font-size:24rpx;
+  line-height:70rpx;
+  position:absolute;
+  bottom:-35rpx;
+  left:0;
+  right:0;
+  color:#fff;
+}
+.cir{
+  background-color:rgba(0,0,0,.3);
+  width:75rpx;
+  height:75rpx;
+  border-radius:50%;
+  position:absolute;
+  right:0;
+  bottom:0;
+  line-height:65rpx;
+  text-align: center;
+}
+.img-arrow{
+  width:50rpx;
+  height:50rpx;
+  vertical-align: middle;
 }

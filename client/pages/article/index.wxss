@@ -58,6 +58,7 @@ page {
 
 .discuss-content {
   height: 100rpx;
+  width:90%;
   margin: 30rpx auto;
   padding: 20rpx;
   border-radius: 3px;

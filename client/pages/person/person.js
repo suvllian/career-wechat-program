@@ -3,25 +3,29 @@ const config = require("../../config.js")
 
 Page({
   data: {
-    nameFlag: true,
+    nameFlag: false,
     userInfo: {},
     name: '',
     phone: 0,
     wechatId: 'wx',
-    gender: 1
+    gender: 1,
+    isShow: false,
+  },
+  fold: function () {
+    this.setData({
+      nameFlag: false,
+      isShow: false
+    })
+  },
+  addMine: function () {
+    this.setData({
+      nameFlag: true,
+      isShow: true
+    })
   },
   onLoad: function (options) {
     const baiscUserInfo = appInstance.globalData.userInfo
     const that = this
-
-    if (!baiscUserInfo.nickName) {
-      wx.showToast({
-        title: '未登录',
-        icon: 'none'
-      })
-
-      return
-    }
 
     wx.request({
       url: config.service.professionUrl,
@@ -44,32 +48,6 @@ Page({
         that.setData({
           userInfo: baiscUserInfo
         })
-      }
-    })
-
-  },
-  changeName: function () {
-    this.setData({
-      nameFlag: false
-    });
-  },
-  confirmName: function (e) {
-    let newName = e.detail.value;
-    var that = this;
-    wx.request({
-      url: config.service.changeNameUrl,
-      data: {
-        newName: newName,
-        nickName: appInstance.globalData.userInfo
-      },
-      success: function (ctx) {
-        console.log(ctx);
-        //  that.setData({
-        //    name:ctx.data[0].name
-        //  })
-      },
-      fail: function () {
-
       }
     })
   }

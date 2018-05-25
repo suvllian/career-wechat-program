@@ -63,5 +63,14 @@ article.addArticle = async ctx => {
   })
 }
 
+// get articles by username
+article.getMyArticle = async ctx => {
+  const { nickName } = ctx.query
+
+  ctx.state.data = await mysql.select('*').from("articles").join('user', function () {
+    this.on('user.id', '=', 'articles.authorId').on('user.nickName', '=', `nickName`)
+  });
+}
+
 
 module.exports = article

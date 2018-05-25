@@ -1,0 +1,6 @@
+<!--pages/gate/gate.wxml-->
+<view class="img-box">
+  <image class="welcome" src="../../images/welcome.jpg"></image>
+</view>
+<button class="btn" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>

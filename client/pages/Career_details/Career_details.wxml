@@ -1,42 +1,64 @@
 <!--pages/Career_details/Career_details.wxml-->
-<view class='top'>
-  <image src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" mode='scaleToFill' />
+<view class='box'>
+  <view class='top'>
+    <image src="../../images/banner2.jpg" mode='scaleToFill' />
+  </view>
+  <view class='hr'></view>
+  <view class='head-portrait'>
+    <image src='../../images/user.jpeg' mode='aspectFit'></image>
+  </view>
+  <view class='icon_font' bindtap='toArticle'>
+    <image src='../../images/+.png'></image>
+  </view>
+  <view class='talk'>
+    <navigator url='../../pages/article-list/index'open-type="switchTab">
+      <image src='../../images/talk.png' mode='aspectFit'></image>
+    </navigator>
+  </view>
+  <view class='top_info'>
+    <view class='career_name'>软件工程师</view>
+    <view class='English'>Software Engineer </view>
+  </view>
+</view>
+
+<view class='main'>
+  <view class='text_title'>基本简介</view>
+  <view class='text_info'>它是一个广义的概念，包括软件设计人员、软件架构人员、软件工程管理人员、程序员等一系列岗位，工作内容都与软件开发生产相关。软件工程师的技术要求是比较全面的，除了最基础的编程语言(C语言/C++/JAVA等)、数据库技术(SQL/ORACLE/DB2等)等，还有诸多如JAVASCRIPT、AJAX、HIBERNATE、SPRING等前沿技术。此外，关于网络工程和软件测试的其他技术也要有所涉猎。</view>
 </view>
 <view class='main'>
-  <view class='introduction'>
-    <view class='block'>
-      <view class='title'> 基本信息</view>
+  <view class='text_title'>职业要求</view>
+  <scroll-view class="scroll-view_H" scroll-y style="height:400rpx; padding-top:20rpx;">
+  <view class='text_info'>1、可视化编程
+　　要求：掌握程序设计方法及可视化技术，精通一种可视化平台及其软件开发技术。获取Delphi程序员系列、Java初级或VB开发能手认证。
+　　就业方向：企业、政府、社区、各类学校等可视化编程程序员。
+2、WEB应用程序设计
+　　要求：具有美工基础和网页动画设计能力，掌握交互式网页程序的设计技术，能进行网站建设和维护。获取Macromedia多媒体互动设计师或Delphi初级程序员或Delphi快速网络开发工程师认证。
+　　就业方向：企业、政府、社区、各类学校等WEB应用程序员。
+3、数据库管理
+　　要求：能应用关系范式进行数据库设计，精通SQL语言，胜任数据库服务器管理与应用工作。获取Oracle数据库管理或SQL Server数据库应用或Windows XP应用认证。
+　　就业方向：企业、政府、社区、各类学校等部门的中、大型数据库管理员。
+4、软件测试
+　　要求：掌握软件测试的基本原理、方法和组织管理，精通软件测试工具。获取ATA软件测试工程师或Delphi初级程序员或Java初级程序员认证。
+　　就业方向：企业、政府、社区、各类学校等软件测试员。
+5、图形图像制作
+　　要求：精通国际上流行的图形/图像制作工具(如CorelDraw、Photoshop、Pagemaker等)。获取平面设计师相关的认证。
+　　就业方向：广告制作公司、建筑设计公司、包装装璜设计公司、居室装修公司、出版印刷公司。
+6、网络构建技术
+　　要求：熟悉网络结构和组网方式，掌握建网方法，能利用工具分析和排除常见网络故障。获取Cisco路由配置或华为网络工程或AMP应用工程师认证。
+　　就业方向：企业、政府、社区、各类学校等网络构建工程师。
+7、网络系统管理
+　　要求：掌握网络系统管理的基本知识与应用技能，能进行网络系统的安全设置。获取Window2000 Server或TurboLinux TLCE或Cisco路由配置专家认证。
+　　就业方向：企业、政府、社区、各类学校等网络系统管理员。
+8、计算机办公应用
+　　要求：精通办公自动化应用与管理，熟悉服务器的安装、管理和维护，基于应用服务器的相关服务和软件系统，具备对服务器的网络安全设置、邮件、网页发布、FTP、OA、BBS等系统的应用和维护能力。
+　　就业方向：企业、政府、社区、各类学校等系统管理
 
-    </view>
-    <view class='hr'></view>
-    <view class='box'>
-      <view class='left'>
-        <image src='../../images/user.jpeg' mode='scaleToFill'></image>
-      </view>
-      <view class='right'>
-        <view class='name'>职业名称：国际注册机械工程师</view>
-        <view class='p_name'>所属专业：机械 </view>
-        <view class='pover'>核心能力：技能及管理能力 </view>
-      </view>
-    </view>
-  </view>
-  <view class='block'>
-    <view class='title'> 职业介绍</view>
-  </view>
-  <view class='hr'> </view>
-  <view class='text_info'>国际注册机械工程师资格认证(ICME)是由机械工程师学会(IME)开展的专业工程师资格认 证，国际注机械工程师学会Logo机械工程师学会Logo册机械工程师资格认证体系通过统一资格考试、面试、专业能力评 估、 业绩考核、行业权威人士推荐和同行评议相结合等多种方式对专业技术人员进行评价。属于国际同行认可的技术 (或从业)资格认证。
-  </view>
-
-  <view class='block'>
-    <view class='title'> 职业发展路径</view>
-  </view>
-  <view class='hr'> </view>
-  <view class='text_info'>国际注册机械工程师资格认证(ICME)是由机械工程师学会(IME)开展的专业工程师资格认 证，国际注机械工程师学会Logo机械工程师学会Logo册机械工程师资格认证体系通过统一资格考试、面试、专业能力评 估、 业绩考核、行业权威人士推荐和同行评议相结合等多种方式对专业技术人员进行评价。属于国际同行认可的技术 (或从业)资格认证2。
-  </view>
 </view>
-
-<view class='bottom' bindtap="toDiscuss">
-  <view class='bottom_info'>
-    <image src='../../images/talk.png'></image>
-  </view>
+</scroll-view>
+</view>
+<view class='main'>
+  <view class='text_title'>职业发展规划</view>
+  <view class='text_info'>
+　学好专业知识，认真看高数、英语、马克思理论、数据结构、计算机组成与原理为考深大做准备，数据库设计人员，积累经验。中级技术工程师>高级技术工程师>管理方向
+</view>
 </view>

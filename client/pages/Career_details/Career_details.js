@@ -63,8 +63,9 @@ Page({
   onShareAppMessage: function () {
   
   },
-  toDiscuss:function(){
-    wx.switchTab({
+  toArticle:function(){
+    wx.navigateTo({
+      url: '../../pages/publish/publish',
     })
   }
 })

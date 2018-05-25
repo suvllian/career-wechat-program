@@ -1,135 +1,139 @@
 /* pages/index/index.wxss */
-page{
+
+page {
   height: 100%;
   width: 100%;
-  background-color:#F5F5F5;
+  background-color: #f5f5f5;
 }
 
-.main{
-}
 /*轮播图*/
-.swiper{
+
+.swiper {
   width: 100%;
   height: 500rpx;
 }
-.slide-image{
-  width:100%;
+
+.slide-image {
+  width: 100%;
   height: 100%;
 }
+
 /*八大职业*/
-.box{
+.box {
   margin-top: 20rpx;
-  
 }
-.column{
+
+.column {
   display: flex;
   flex-direction: row;
   background-color: white;
- 
-}
-.profession{
-  flex-direction:colunmn;
-   margin-top: 10rpx;
-   margin-bottom: 10rpx;
-   margin-left: 47.5rpx;
-   margin-right: 47.5rpx;
-}
-.profession2{
-  flex-direction:colunmn;
-   margin-top: 10rpx;
-   margin-bottom: 10rpx;
-   margin-left: 47.5rpx;
-   margin-right: 47.5rpx;
+  padding: 5rpx 0;
 }
 
-.image-info image{
+.profession {
+  flex-direction: colunmn;
+  padding: 20rpx 45rpx;
+}
+
+.profession2 {
+  flex-direction: colunmn;
+  padding: 10rpx 45rpx;
+}
+
+.image-info image {
   width: 100rpx;
   height: 100rpx;
 }
 
-.text-info{
+.text-info {
   font-size: 25rpx;
   text-align: center;
 }
+
 /*分割线*/
-.hr{
-  margin:20rpx;
-}
-.block{
+.block {
   background-color: white;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
-  padding-left: 47.5rpx;
-  padding-right: 47.5rpx;
+  padding-bottom: 20rpx;
+  margin-top: 30rpx;
 }
+
 /*内推top5*/
-.top5{
-display: flex;
-flex-direction: row;
-padding: 20rpx 0  20rpx 0rpx;
-height: 50rpx;
+.top5 {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 47.5rpx;
+  height: 50rpx;
+  border-bottom: 1px solid #f5f5f5;
 }
-.title_image image{
+
+.title_image {
   height: 45rpx;
   width: 45rpx;
   padding-right: 10rpx;
 }
-.title1{
+
+.title1 {
   font-weight: 580;
   font-size: 32rpx;
   line-height: 50rpx;
 }
-.box2{
-padding-bottom: 30rpx;  
+
+.box2 {
+  padding: 0 47.5rpx 30rpx;
 }
-.list{
-  padding: 30rpx 0rpx  30rpx 0rpx;
+
+.list {
+  padding: 30rpx 0rpx 30rpx 0rpx;
   font-size: 30rpx;
   line-height: 35rpx;
   display: flex;
   flex-direction: row;
 }
-.hr2{
-  border: 1px solid #F5F5F5;
-}
-.tilte3{
-  width:700rpx;
+
+.tilte3 {
+  width: 700rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 32rpx;
 }
-.block2{
-display: flex;
-flex-direction: row;
-margin-top: 30rpx;
+
+.block2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
 }
-.card{
+
+.card {
   display: flex;
   flex-direction: column;
-  width: 270rpx;
+  width: 300rpx;
   height: 100%;
-  background-color: #F2F2F2;
-  border-radius: 30rpx;
-  margin-left: 33.75rpx;
-  margin-right:28.75rpx;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: #000;
+  padding-top: 20rpx;
+  border-radius: 10rpx;
+  margin: 0 20rpx;
+  box-shadow: 1px 1px 3px #ccc;
 }
-.card_image_info image{
-  width:260rpx;
-  height: 150rpx;
-  margin-top:10rpx;
-  margin-left: 10rpx;
-  margin-right: 10rpx;
-  border-radius: 30rpx;
+
+.card_image_info image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
 }
-.card_text_info{
-font-size: 20rpx;
-text-align: center;
-padding:10rpx 0rpx;
+
+.card_text_info {
+  font-size: 20rpx;
+  text-align: center;
+  padding: 10rpx 0rpx;
 }
+
 /*进入图标*/
-.list:active{
-            opacity: 1;
-            transform: scale(0.9);
+
+.list:active {
+  opacity: 1;
+  transform: scale(0.9);
 }

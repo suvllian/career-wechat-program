@@ -1,30 +1,14 @@
 <!--pages/anwser/anwser.wxml-->
 <view id="body">
-
-<view class="floor1">
-  <view class="applebox">
-    <view class="col"bindtap="toAnwser">
-        <view class="sub">
-            <text class="title">乐视网：腾讯、京东、苏宁体育、TCL等有意投资新乐视智家    </text>    
-        </view>
+  <view wx:if="{{articles.length > 0}}">
+    <view>
+      <view class="article-box" wx:for="{{articles}}" wx:for-index="idx" wx:key="idx">
+        <navigator url="/pages/article/index?id={{item.id}}">
+          <view class="article-inner">
+            <text class="title">{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
     </view>
   </view>
 </view>
-<view class="floor1">
-  <view class="applebox">
-    <view class="col"bindtap="toAnwser">
-        <view class="sub">
-            <text class="title">乐视网：腾讯、京东、苏宁体育、TCL等有意投资新乐视智家    </text>    
-        </view>
-    </view>
-  </view>
-  <view class="applebox">
-    <view class="col"bindtap="toAnwser">
-        <view class="sub">
-            <text class="title">乐视网：腾讯、京东、苏宁体育、TCL等有意投资新乐视智家    </text>    
-        </view>
-    </view>
-  </view>
-</view>
-</view>
-

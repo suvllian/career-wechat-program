@@ -1,13 +1,19 @@
 <view class="person">
+ 
   <view id="person_box">
+  <view class="a-box">
     <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
-    <view class="usrname">{{userInfo.nickName}}</view>
   </view>
-  <view>
+  
+    <view class="usrname"><view class="text">
+    {{userInfo.nickName}}
+    </view>
+    </view>
+ </view>
+  <view id="person_details">
     <view class="info-panel"bindtap="changeName">
       <view>姓名</view>
-      <view wx:if="{{nameFlag}}">{{name}}</view>
-      <input wx:if="{{!nameFlag}}" bindblur="confirmName"></input>
+      <view>{{name}}</view>
     </view>
     <view class="info-panel">
       <view>手机号</view>
