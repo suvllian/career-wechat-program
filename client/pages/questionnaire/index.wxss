@@ -20,7 +20,7 @@
   overflow:hidden;
 }
 .qusetion-panel:hover .info-title{
-  display:none;
+  display: none;
 }
 .text-center{
   text-align:center;
@@ -43,6 +43,7 @@
   border-radius:5rpx;
   color:#fff;
   height:570rpx;
+  line-height:35rpx;
 }
 .social{
   background-color:#d64f44;

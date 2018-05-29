@@ -4,19 +4,15 @@ import { formatTime } from "../../utils/util.js"
 Page({
   data: {
     article: {},
-    hiddenmodalput: true, 
+    hiddenmodalput: true,
     focus: false,
-    modalFlag:true,
-    info:'',
-    number2:'',
-    content: [
-      { image: '../../images/user.jpeg', name: '小明', time: '2018-03-24', content_info:'洒家卡恢复健'},
-      { image: '../../images/user.jpeg', name: '小红', time: '2018-02-25', content_info: '帖子不错' },
-      { image: '../../images/user.jpeg', name: '小绿', time: '2018-10-10', content_info: '真的啊' },
-    ],
-    number2:'',
-    error:'请输入内容',
-  }, 
+    modalFlag: true,
+    info: '',
+    number2: '',
+    commentList: [],
+    number2: '',
+    error: '请输入内容',
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -24,7 +20,8 @@ Page({
     // 获取文章内容
     this.getContent(options.id)
     // 获取评论内容
-
+    this.getComment(options.id)
+    this.addReadingQuantity(options.id)
   },
 
   /**
@@ -38,11 +35,23 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
 
   },
+  // 增加文章阅读量
+  addReadingQuantity: function(id) {
+    wx.request({
+      url: `${config.service.addReadingQuantityUrl}?articleId=${id}`,
+      success: function(res) {
+        console.log(res)
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
+  },
   // 获取文章内容
-  getContent: function(id) {
+  getContent: function (id) {
     const that = this
 
     wx.request({
@@ -54,6 +63,25 @@ Page({
 
         that.setData({
           article
+        })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
+  },
+  // 获取评论内容
+  getComment: function (id) {
+    const that = this
+
+    wx.request({
+      url: `${config.service.getArticleCommentUrl}?articleId=${id}`,
+      success: function (res) {
+        const { data } = res
+        const { data: commentList } = data
+
+        that.setData({
+          commentList
         })
       },
       fail: function (err) {

@@ -3,12 +3,7 @@ const config = require("../../config.js")
 
 Page({
   data: {
-    content_top5: [
-      { id: '1', text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-      { id: '2', text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-      { id: '3', text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-      { id: '4', text_info: '如何深度思考你的职业生涯（原来很多人都被误导了）' },
-    ],
+    hotArticles: [],
     imgUrls: [
       './../../images/banner2.jpg',
       './../../images/banner1.jpg',
@@ -17,13 +12,24 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 3000,
-    duration: 1000
+    duration: 1000,
+   industries:[]
   },
   onLoad: function (options) {
+    var that=this;
     wx.showLoading({
       title: '加载中',
       mask: true
+    });
+    wx.request({
+      url: config.service.directionUrl,
+      success:function(res){
+        that.setData({
+          industries:res.data.data
+        })
+      }
     })
+    this.getHotArticle()
   },
   onReady: function () {
     wx.hideLoading()
@@ -31,9 +37,17 @@ Page({
   onShow: function () {
 
   },
-  toDetail: function () {
-    wx.navigateTo({
-      url: '../career/career',
+  // 获取热门帖子
+  getHotArticle: function() {
+    const that = this
+    
+    wx.request({
+      url: config.service.getHotArticleUrl,
+      success: function (res) {
+        that.setData({
+          hotArticles: res.data.data
+        })
+      }
     })
   }
 })

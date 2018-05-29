@@ -9,52 +9,13 @@
 
 <!-- 八大行业 -->
 <view class='box'>
-  <view class='column'>
-    <view class='profession' bindtap="toDetail">
-      <view class='image-info'>
-        <image src='../../images/software.png' mode='aspectFit' /> </view>
-      <view class='text-info'>计算机</view>
-    </view>
+  <navigator wx:for-index="idx" wx:key="idx" url="../career/index?id={{item.id}}" wx:for="{{industries}}">
     <view class='profession'>
       <view class='image-info'>
-        <image src='../../images/architec.png' mode='aspectFit' /> </view>
-      <view class='text-info'>建筑</view>
+        <image src='{{item.logo}}' mode='aspectFit' /> </view>
+      <view class='text-info'>{{item.name}}</view>
     </view>
-    <view class='profession'>
-      <view class='image-info'>
-        <image src='../../images/sail.png' mode='aspectFit' /> </view>
-      <view class='text-info'>房地产</view>
-    </view>
-    <view class='profession'>
-      <view class='image-info'>
-        <image src='../../images/math.png' mode='aspectFit' /> </view>
-      <view class='text-info'>金融</view>
-    </view>
-  </view>
-
-  <view class='column'>
-    <view class='profession2'>
-      <view class='image-info'>
-        <image src='../../images/teacher.png' mode='aspectFit' /> </view>
-      <view class='text-info'>教育</view>
-    </view>
-    <view class='profession2'>
-      <view class='image-info'>
-        <image src='../../images/design.png' mode='aspectFit' /> </view>
-      <view class='text-info'>设计</view>
-    </view>
-    <view class='profession2'>
-      <view class='image-info'>
-        <image src='../../images/cars2.png' mode='aspectFit' /> </view>
-      <view class='text-info'>汽车</view>
-    </view>
-    <view class='profession2'>
-      <view class='image-info'>
-        <image src='../../images/news.png' mode='aspectFit' /> </view>
-      <view class='text-info'>新闻</view>
-    </view>
-  </view>
-
+  </navigator>
 </view>
 <view class='main'>
   <!-- 内推top5 -->
@@ -64,13 +25,13 @@
       <view class='title1'> 热门帖TOP5</view>
     </view>
     <view class='box2'>
-      <view class='list' wx:for="{{content_top5}}">
-        <view class='tilte3'>{{item.id}}.{{item.text_info}} </view>
-      </view>
+      <navigator wx:for="{{hotArticles}}" url="/pages/article/index?id={{item.id}}">
+        <view class='list'>
+          <view class='tilte3'>{{index+1}}.{{item.title}} </view>
+        </view>
+      </navigator>
     </view>
   </view>
-
-
   <!-- hot热门 -->
   <view class='block'>
     <view class='top5'>

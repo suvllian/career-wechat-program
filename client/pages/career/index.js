@@ -6,15 +6,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-   
+   career:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const ind=options.id;
+    var that=this;
+    console.log(ind);
       wx.request({
-        url:config.service.direction ,
+        url:config.service.middleUrl,
+        data:{ind},
+        success:function(res){
+          that.setData({
+            career:res.data.data
+          })
+        },
+        fail:function(){
+          console.log(2)
+        }
       })
   },
 

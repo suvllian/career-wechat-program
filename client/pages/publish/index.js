@@ -51,7 +51,7 @@ Page({
         nickName: appInstance.globalData.userInfo.nickName
       },
       success: function (res) {
-        const { data = {} } = res
+        const { data } = res
 
         if (!data.code) {
           wx.showToast({

@@ -67,6 +67,7 @@ page{
   background-color:#fff;
   box-shadow: 1px 2px 2px #ccc;
   overflow:hidden;
+  margin-bottom: 30rpx;
 }
 .career-img{
   width:200rpx;

@@ -16,7 +16,12 @@ Page({
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: function (res) {
-              console.log(res)
+              const { userInfo } =res;
+
+              appInstance.globalData.userInfo = userInfo
+              wx.switchTab({
+                url: '../../pages/index/index',
+              })
             }
           })
         }
@@ -24,12 +29,6 @@ Page({
     })
   },
   bindGetUserInfo: function (e) {
-    const { userInfo } = e.detail.userInfo
 
-    appInstance.globalData.userInfo = userInfo
-
-    wx.switchTab({
-      url: '../../pages/index/index',
-    })
   }
 })

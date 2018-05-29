@@ -19,30 +19,28 @@ page {
 }
 
 /*八大职业*/
+
 .box {
   margin-top: 20rpx;
 }
 
-.column {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  padding: 5rpx 0;
-}
-
 .profession {
-  flex-direction: colunmn;
-  padding: 20rpx 45rpx;
+  width: 25%;
+  float: left;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
 }
 
-.profession2 {
-  flex-direction: colunmn;
-  padding: 10rpx 45rpx;
+.box {
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .image-info image {
   width: 100rpx;
+  margin: 0 auto;
   height: 100rpx;
+  display: block;
 }
 
 .text-info {
@@ -51,6 +49,7 @@ page {
 }
 
 /*分割线*/
+
 .block {
   background-color: white;
   padding-bottom: 20rpx;
@@ -58,6 +57,7 @@ page {
 }
 
 /*内推top5*/
+
 .top5 {
   display: flex;
   align-items: center;
@@ -75,11 +75,11 @@ page {
 .title1 {
   font-weight: 580;
   font-size: 32rpx;
-  line-height: 50rpx;
+  line-height: 40rpx;
 }
 
 .box2 {
-  padding: 0 47.5rpx 30rpx;
+  padding: 0 47.5rpx 10rpx 47.5rpx;
 }
 
 .list {
@@ -88,10 +88,11 @@ page {
   line-height: 35rpx;
   display: flex;
   flex-direction: row;
+  border-bottom: 1px solid #eee;
 }
 
 .tilte3 {
-  width: 700rpx;
+  width: 670rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -114,7 +115,7 @@ page {
   padding-top: 20rpx;
   border-radius: 10rpx;
   margin: 0 20rpx;
-  box-shadow: 1px 1px 3px #ccc;
+  box-shadow: 1px 1px 3px #999;
 }
 
 .card_image_info image {
@@ -133,7 +134,7 @@ page {
 
 /*进入图标*/
 
-.list:active {
+.nav-top5 :active {
   opacity: 1;
   transform: scale(0.9);
 }

@@ -4,11 +4,17 @@ Page({
   data: {
     articles: []
   },
+  onLoad:function(){
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
+  },
   onShow: function (options) {
     this.getArticles()
   },
   onReady: function () {
-    
+    wx.hideLoading()
   },
   getArticles: function() {
     const that = this

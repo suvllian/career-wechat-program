@@ -4,7 +4,6 @@ const user = {}
 
 user.getUserInfo = async ctx => {
   const { nickName } = ctx.query
-
   const userInfo = await mysql("user").where({ nickName }).select("*")
 
   ctx.state.data = userInfo && userInfo[0]

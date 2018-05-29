@@ -52,6 +52,17 @@ router.get('/article', controllers.article.getArticleList)
 router.get('/specialArticle', controllers.article.getSpecialArticle)
 // 获取我的帖子
 router.get('/getMyArticle', controllers.article.getMyArticle)
+// 获取帖子评论内容
+router.get('/getArticleComment', controllers.article.getArticleComment)
+// 设置帖子阅读量
+router.get('/addReadingQuantity', controllers.article.addReadingQuantity)
+// 获取热门贴
+router.get('/getHotArticle', controllers.article.getHotArticle)
 
 
+// 渲染首页的行业列表
+router.get("/getAll",controllers.direction.all)
+// 渲染career页面的职业列表
+router.get("/getMiddle",controllers.direction.middle)
+router.get("/getFinal", controllers.direction.final)
 module.exports = router

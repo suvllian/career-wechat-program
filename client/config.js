@@ -18,22 +18,28 @@ var config = {
 
     // 测试的信道服务地址
     tunnelUrl: `${host}/weapp/tunnel`,
-
     // 上传图片接口
     uploadUrl: `${host}/weapp/upload`,
     //获取个人信息
     professionUrl: `${host}/weapp/getUserInfo`,
-
     // 添加文章
     addArticleUrl: `${host}/weapp/addArticle`,
     // 获取贴子列表
     articlesUrl: `${host}/weapp/article`,
     // 贴子具体内容
     specialArticleUrl: `${host}/weapp/specialArticle`,
-    // 获取我的帖子
-    getMyArticleUrl: `${host}/weapp/getMyArticle`
-     
-    //提交修改的信息
+    // 帖子评论内容
+    getArticleCommentUrl: `${host}/weapp/getArticleComment`,
+    // 增加阅读量
+    addReadingQuantityUrl: `${host}/weapp/addReadingQuantity`,
+    // 获取热门帖子
+    getHotArticleUrl: `${host}/weapp/getHotArticle`,
+
+    //行业选择
+    directionUrl: `${host}/weapp/getAll`,
+    // 职业middle选择
+    middleUrl: `${host}/weapp/getMiddle`,
+    finalUrl: `${host}/weapp/getFinal`
   }
 };
 

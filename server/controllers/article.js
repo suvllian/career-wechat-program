@@ -7,9 +7,9 @@ const getCurrentDayStart = () => {
   const currentTime = new Date()
   const year = currentTime.getFullYear()
   const month = currentTime.getMonth()
-  const day = currentTime.getDay()
+  const day = currentTime.getDate()
 
-  return new Date(`${year}-${month}-${day}`).getTime()
+  return new Date(`${year}-${month + 1}-${day}`).getTime()
 }
 
 // get all articles list
@@ -72,5 +72,34 @@ article.getMyArticle = async ctx => {
   });
 }
 
+// get articles by username
+article.getMyArticle = async ctx => {
+  const { nickName } = ctx.query
+
+  ctx.state.data = await mysql.select('*').from("articles").join('user', function () {
+    this.on('user.id', '=', 'articles.authorId').on('user.nickName', '=', `nickName`)
+  });
+}
+
+// get article comment list
+article.getArticleComment = async ctx => {
+  const { articleId } = ctx.query
+
+  ctx.state.data = await mysql.select('*').from("comment").join('user', function () {
+    this.on('comment.articleId', '=', parseInt(articleId)).on('user.id', '=', 'comment.userId')
+  });
+}
+
+// increase reading quantity of special article
+article.addReadingQuantity = async ctx => {
+  const { articleId } = ctx.query
+
+  ctx.state.data = await mysql('articles').where('id', '=', parseInt(articleId)).increment('reading_quantity', 1)
+}
+
+// hot article
+article.getHotArticle = async ctx => {
+  ctx.state.data = await mysql('articles').orderBy('reading_quantity', 'desc').limit(4)
+}
 
 module.exports = article

@@ -1,0 +1,16 @@
+<!--pages/publish/publish.wxml-->
+<view class="di_c">
+  <input 
+    class="discuss_content_tilte" 
+    placeholder="请输入标题..."
+    bindinput='bindTitleInput'
+  />
+  <textarea 
+    class="discuss_content"
+    placeholder="请输入问题..."
+    bindinput='bindContentInput'
+  />
+  <button 
+    class="submit" 
+    bindtap='publishArticle'>发起讨论</button>
+</view>

@@ -28,4 +28,5 @@
       <view>{{userInfo.gender === 1 ? '男' : '女'}}</view>
     </view>
   </view>
+   
 </view>

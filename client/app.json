@@ -1,19 +1,18 @@
 {
   "pages": [
     "pages/gate/index",
+    "pages/person/index",
     "pages/index/index",
-    "pages/career/career",
-    "pages/questionnaire/questionnaire",
-    "pages/mine/mine",
-    "pages/Career_details/Career_details",
+    "pages/career/index",
+    "pages/questionnaire/index",
+    "pages/mine/index",
+    "pages/career-details/index",
     "pages/article-list/index",
-    "pages/publish/publish",
+    "pages/publish/index",
     "pages/article/index",
-    "pages/person/person",
-    "pages/myCareer/myCareer",
-    "pages/indexcs/indexcs",
-    "pages/mine_publish/mine_publish",
-    "pages/my_publish_in/my_publish_in"
+    "pages/my-career/index",
+    "pages/mine-publish/index",
+    "pages/my-publish-in/index"
   ],
   "window": {
     "backgroundColor": "#F5F5F5",
@@ -40,7 +39,7 @@
         "selectedIconPath": "images/discuss2.png"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/mine/index",
         "text": "我的",
         "iconPath": "images/mine.png",
         "selectedIconPath": "images/mine2.png"

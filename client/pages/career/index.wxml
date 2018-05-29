@@ -1,0 +1,14 @@
+<view class='box'>
+  <view>
+    <navigator wx:for-index="idx" wx:key="idx" url="../career-details/index?id={{item.id}}" wx:for="{{career}}">
+      <view class="card">
+        <image src="{{item.imageUrl}}" class="career-img"></image>
+        <view class="left">
+          <text class="career-de">{{item.name}}</text>
+          <text class="career-en">{{item.professionName}}</text>
+          <text class="career-info">有2222人与你共同学习</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

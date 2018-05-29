@@ -3,25 +3,25 @@ const config = require("../../config.js")
 
 Page({
   data: {
-    nameFlag: false,
+    nameFlag:false,
     userInfo: {},
     name: '',
     phone: 0,
     wechatId: 'wx',
     gender: 1,
-    isShow: false,
+    isShow:false,
   },
-  fold: function () {
+  fold:function(){
     this.setData({
       nameFlag: false,
       isShow: false
     })
   },
-  addMine: function () {
-    this.setData({
-      nameFlag: true,
-      isShow: true
-    })
+  addMine:function(){
+      this.setData({
+        nameFlag:true,
+        isShow:true
+      })
   },
   onLoad: function (options) {
     const baiscUserInfo = appInstance.globalData.userInfo
@@ -50,5 +50,6 @@ Page({
         })
       }
     })
+
   }
 })
