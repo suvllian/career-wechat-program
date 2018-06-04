@@ -1,10 +1,9 @@
 /* pages/questionnaire/questionnaire.wxss */
 #box{
   background-color:#f5f5f5;
-  height:100%;
   width:100%;
   overflow:hidden;
-  padding:50rpx 0;
+  padding:40rpx 0;
 }
 .question-title{
   padding:20rpx 0; 
@@ -29,7 +28,7 @@
 .info-title{
   text-align:center;
   width:100%;
-  height:600rpx; line-height:600rpx;
+  height:570rpx; line-height:600rpx;
   margin:0 auto;
     background-color:rgba(0,0,0,.6);
     position:absolute;

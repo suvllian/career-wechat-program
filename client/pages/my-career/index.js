@@ -1,17 +1,17 @@
-Page({
+const appInstance = getApp()
+const config = require("../../config.js")
+import { formatTime } from "../../utils/util.js"
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
-    
+    jobsList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.getMyApplyList()
   },
 
   /**
@@ -27,39 +27,31 @@ Page({
   onShow: function () {
     
   },
+  getMyApplyList: function () {
+    const that = this
+    const userInfo = appInstance.globalData.userInfo
+    const { nickName } = userInfo
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
+    wx.request({
+      url: config.service.getMyApplyListUrl,
+      data: { nickName },
+      success: function(res) {
+        that.setData({
+          jobsList: res.data.data.map(item => {
+            item.apply_time = formatTime(item.apply_time)
+            item.id = `${item.id}`.padStart(6, '0')
+            if (item.apply_status === 'pending') {
+              item.applyStatus = '内推成功'
+            } else {
+              item.applyStatus = '申请中'
+            }
+            return item
+          })
+        })
+      },
+      fail: function(err) {
+        console.log(err)
+      }
+    })
   }
 })

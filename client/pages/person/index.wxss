@@ -98,11 +98,9 @@
   height:50rpx;
   vertical-align: middle;
 }
-@keyframes slide{
-  0%{
-    height:0;
-  }
-  25%{
-    height:
-  }
-} 
+.red{
+  color:#e4393c;
+}
+input{
+  text-align:right;
+}

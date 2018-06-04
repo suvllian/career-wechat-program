@@ -1,0 +1,30 @@
+/* pages/my-publish-fabu/index.wxss */
+page{
+  height:100%;
+  background-color: #f5f5f5;
+}
+
+.picker-range {
+  padding: 20px;
+}
+
+.discuss_content_tilte, .discuss_content {
+  width: 86%;
+  background-color: #eee;
+  margin: 20rpx auto;
+  padding: 20rpx 30rpx;
+  border-radius: 5px;
+  font-size: 26rpx;
+}
+
+.discuss_content {
+  height: 500rpx;
+}
+
+.submit {
+  width: 200rpx;
+  margin-top: 40rpx;
+  background-color: #878787;
+  color: #fff;
+  font-size: 26rpx;
+}

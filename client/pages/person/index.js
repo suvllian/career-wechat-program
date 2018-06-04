@@ -3,25 +3,60 @@ const config = require("../../config.js")
 
 Page({
   data: {
-    nameFlag:false,
+    nameFlag: false,
     userInfo: {},
     name: '',
     phone: 0,
-    wechatId: 'wx',
     gender: 1,
-    isShow:false,
+    isShow: false,
+    sessionFlag: false
   },
-  fold:function(){
+  fold: function () {
     this.setData({
       nameFlag: false,
       isShow: false
     })
   },
-  addMine:function(){
-      this.setData({
-        nameFlag:true,
-        isShow:true
-      })
+  addMine: function () {
+    this.setData({
+      nameFlag: true,
+      isShow: true
+    })
+  },
+  changeFLag: function () {
+    this.setData({
+      sessionFlag: true
+    })
+  },
+  changePhone: function (e) {
+    this.setData({
+      phone: e.detail.value
+    })
+  },
+  changeName: function (e) {
+    this.setData({
+      name: e.detail.value
+    })
+  },
+  changeFlag:function(){
+    this.setData({
+      sessionFlag: true
+    })
+  },
+  changeSuc: function () {
+    var that = this;
+    var { phone, name, userInfo } = this.data;
+    wx.request({
+      url: config.service.changeNameUrl,
+      method: "POST",
+      data: { phone, name, userInfo },
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          sessionFlag: false
+        })
+      }
+    })
   },
   onLoad: function (options) {
     const baiscUserInfo = appInstance.globalData.userInfo
@@ -40,7 +75,6 @@ Page({
           userInfo: baiscUserInfo,
           name: userInfo.name,
           phone: userInfo.phone,
-          wechatId: userInfo.wechatId,
           gender: userInfo.gender
         })
       },
@@ -51,5 +85,6 @@ Page({
       }
     })
 
-  }
+  },
+
 })

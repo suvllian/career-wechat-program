@@ -35,9 +35,10 @@
       </view>
     </view>
   </view>
-  <view class="add-btn">
-    <navigator url="/pages/publish/publish">
-      <image src="../../images/+.png" class="add-img"></image>
-    </navigator>
-  </view>
+
+</view>
+<view class="add-btn">
+  <navigator url="/pages/publish/index" class='nav-bottom'>
+    <image src="../../images/+.png" mode=''></image>
+  </navigator>
 </view>

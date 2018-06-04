@@ -4,6 +4,9 @@ height: 100%;
 width:100%;
 background-color:#F5F5F5;
 }
+.career-detail {
+  padding-bottom: 20px;
+}
 .box{
   margin-bottom: 100rpx;
 }
@@ -94,7 +97,7 @@ padding-top: 15rpx;
   width: 600rpx;
   height: auto;
   word-break:break-all;
-  margin: 20rpx auto;
+  margin: 20rpx auto 30px;
   padding: 30rpx;
   font-size: 30rpx;
   border: 1px solid transparent;
@@ -114,4 +117,5 @@ padding-top: 15rpx;
 }
 .navigator-hover{
   opacity: 0.8;
+  background-color: transparent;
 }

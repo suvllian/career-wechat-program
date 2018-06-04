@@ -1,5 +1,5 @@
 <!-- 轮播图 -->
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper'>
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000" class='swiper'>
   <block wx:for="{{imgUrls}}">
     <swiper-item>
       <image src="{{item}}" class="slide-image" />
@@ -44,13 +44,13 @@
           <view class='card_image_info'>
             <image src='../../images/career1.jpg'></image>
           </view>
-          <view class='card_text_info'>软件工程师 </view>
+          <view class='card_text_info'>{{hotJobs[0].publish_type}}</view>
         </view>
         <view class='card'>
           <view class='card_image_info'>
             <image src='../../images/career2.jpg'></image>
           </view>
-          <view class='card_text_info'>软件工程师 </view>
+          <view class='card_text_info'>{{hotJobs[1].publish_type}}</view>
         </view>
       </view>
       <view class='block2'>
@@ -58,13 +58,13 @@
           <view class='card_image_info'>
             <image src='../../images/career3.jpg'></image>
           </view>
-          <view class='card_text_info'>软件工程师 </view>
+          <view class='card_text_info'>{{hotJobs[2].publish_type}}</view>
         </view>
         <view class='card'>
           <view class='card_image_info'>
             <image src='../../images/career4.jpg'></image>
           </view>
-          <view class='card_text_info'>软件工程师 </view>
+          <view class='card_text_info'>{{hotJobs[3].publish_type}}</view>
         </view>
       </view>
     </view>

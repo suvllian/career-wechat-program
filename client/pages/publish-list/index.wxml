@@ -1,0 +1,24 @@
+<view id="box" wx:for="{{jobsList}}">
+  <view class="career-panel" >
+    <text class="panel-title">职位编号：{{item.id}}</text>
+    <view class="content">
+     {{item.publish_type}}
+    </view>
+    <view class='content-info'>
+      <view class="info">
+        能力要求：{{item.ability}}
+      </view>
+      <view class="right info-success">{{item.hasApplied ? "已内推" : "待内推"}}</view>
+    </view>
+    <view class='bottom_info'>
+    <text class="time">发布时间: {{item.publish_time}}</text>
+      <button wx:if="{{!item.hasApplied}}" class='submit' data-job-id='{{item.id}}' bindtap='applyJob'>申请</button>
+    </view>
+  </view>
+</view>
+
+<view class="add-btn">
+  <navigator url="/pages/my-publish-fabu/index" class='nav-bottom'>
+    <image src="../../images/+.png" mode=''></image>
+  </navigator>
+</view>

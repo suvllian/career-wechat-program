@@ -6,3 +6,7 @@
   align-items: center;
   box-sizing: border-box;
 }
+
+page {
+  height: 100%;
+}

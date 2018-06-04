@@ -1,0 +1,17 @@
+<view id="box" wx:for="{{ myPushesList}}">
+  <view class="career-panel">
+    <text class="panel-title">内推编号：6565656</text>
+    <view class="content">
+      {{ item.publish_type}}
+    </view>
+    <view class='content-info'>
+      <view class="info">
+        能力要求：{{item.ability}}
+      </view>
+      <view class="right info-success">{{item.status ? "发布成功" : "发布失败"}}</view>
+    </view>
+    <view class='bottom_info'>
+      <text class="time">发布时间: {{item.publish_time}}</text>
+    </view>
+  </view>
+</view>

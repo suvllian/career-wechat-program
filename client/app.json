@@ -1,25 +1,28 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/publish-list/index",
+    "pages/my-publish-in/index",
+    "pages/my-publish-fabu/index",
+    "pages/career-details/index",
+    "pages/article-list/index",
     "pages/gate/index",
     "pages/person/index",
-    "pages/index/index",
     "pages/career/index",
     "pages/questionnaire/index",
     "pages/mine/index",
-    "pages/career-details/index",
-    "pages/article-list/index",
     "pages/publish/index",
     "pages/article/index",
     "pages/my-career/index",
-    "pages/mine-publish/index",
-    "pages/my-publish-in/index"
+    "pages/my-career-pub/index"
   ],
   "window": {
     "backgroundColor": "#F5F5F5",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "职页",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#8a8a8a",

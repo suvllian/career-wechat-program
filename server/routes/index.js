@@ -39,6 +39,8 @@ router.post('/message', controllers.message.post)
 router.get('/getUserInfo', controllers.user.getUserInfo)
 // 修改用户名
 router.post("/changeName", controllers.user.changeName)
+// 添加用户
+router.post("/addUser", controllers.user.addUser)
 
 /**
  * 文章相关操作
@@ -57,12 +59,31 @@ router.get('/getArticleComment', controllers.article.getArticleComment)
 // 设置帖子阅读量
 router.get('/addReadingQuantity', controllers.article.addReadingQuantity)
 // 获取热门贴
-router.get('/getHotArticle', controllers.article.getHotArticle)
+router.get('/getHotArticle', controllers.article.getHotArticle),
+// some user comment some article
+router.post('/addComment', controllers.article.addComment),
 
 
 // 渲染首页的行业列表
 router.get("/getAll",controllers.direction.all)
 // 渲染career页面的职业列表
 router.get("/getMiddle",controllers.direction.middle)
+// 渲染详情页
 router.get("/getFinal", controllers.direction.final)
+//获取职业名字
+router.get("/getCareerName",controllers.direction.professionType)
+
+// get list of job by profession
+router.get("/getJobsByProfession", controllers.publish.getJobsByProfession)
+// someone apply for jobs
+router.post("/applyJob", controllers.publish.applyJob)
+// 
+router.get("/getMyApplyList", controllers.publish.getMyApplyList)
+// 
+router.get("/getHotApplyList", controllers.publish.getHotApplyList)
+// 渲染我的求职列表
+// 渲染我的内推列表
+router.get("/getMyPushes",controllers.publish.getMyPushes);
+//发布内推
+router.post("/addPushes",controllers.publish.addPushes);
 module.exports = router

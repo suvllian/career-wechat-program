@@ -1,0 +1,10 @@
+<view class="di_c">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='picker-range'>
+    <view class="picker">
+      点击选择职业：{{array[index]}}
+    </view>
+  </picker>
+
+  <textarea class="discuss_content" placeholder="请输入能力要求..." bindinput='bindContentInput' />
+  <button class="submit" bindtap='publishPushes'>发起内推</button>
+</view>

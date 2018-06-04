@@ -1,39 +1,41 @@
 <!--pages/Career_details/Career_details.wxml-->
-<view class='box'>
-  <view class='top'>
-    <image src="../../images/banner2.jpg" mode='scaleToFill' />
+<view class='career-detail'>
+  <view class='box'>
+    <view class='top'>
+      <image src="../../images/banner2.jpg" mode='scaleToFill' />
+    </view>
+    <view class='hr'></view>
+    <view class='head-portrait'>
+      <image src='{{userInfo?userInfo.avatarUrl:"../../images/user.jpg"}}' mode='aspectFit'></image>
+    </view>
+    <view class='icon_font'>
+      <navigator url="/pages/publish-list/index?id={{careerDetail[0].id}}">
+        <image src='../../images/+2.png'></image>
+      </navigator>
+    </view>
+    <view class='talk'>
+      <navigator url='../../pages/article-list/index' open-type="switchTab">
+        <image src='../../images/talk.png' mode='aspectFit'></image>
+      </navigator>
+    </view>
+    <view class='top_info'>
+      <view class='career_name'>{{careerDetail[0].name}}</view>
+      <view class='English'>{{careerDetail[0].professionName}}</view>
+    </view>
   </view>
-  <view class='hr'></view>
-  <view class='head-portrait'>
-    <image src='{{userInfo?userInfo.avatarUrl:"../../images/user.jpg"}}' mode='aspectFit'></image>
-  </view>
-  <view class='icon_font'>
-    <navigator url='/pages/publish/index'>
-      <image src='../../images/+.png'></image>
-    </navigator>
-  </view>
-  <view class='talk'>
-    <navigator url='../../pages/article-list/index' open-type="switchTab">
-      <image src='../../images/talk.png' mode='aspectFit'></image>
-    </navigator>
-  </view>
-  <view class='top_info'>
-    <view class='career_name'>{{careerDetail[0].name}}</view>
-    <view class='English'>Software Engineer </view>
-  </view>
-</view>
 
-<view class='main'>
-  <view class='text_title'>基本简介</view>
-  <view class='text_info'>{{careerDetail[0].introduction}}</view>
-</view>
-<view class='main'>
-  <view class='text_title'>职业要求</view>
-  <view class='text_info'>{{careerDetail[0].skill}}
+  <view class='main'>
+    <view class='text_title'>基本简介</view>
+    <view class='text_info'>{{careerDetail[0].introduction}}</view>
   </view>
-</view>
-<view class='main'>
-  <view class='text_title'>职业发展规划</view>
-  <view class='text_info'>{{careerDetail[0].development}}
+  <view class='main'>
+    <view class='text_title'>职业要求</view>
+    <view class='text_info'>{{careerDetail[0].skill}}
+    </view>
+  </view>
+  <view class='main'>
+    <view class='text_title'>职业发展规划</view>
+    <view class='text_info'>{{careerDetail[0].development}}
+    </view>
   </view>
 </view>

@@ -67,16 +67,7 @@ article.addArticle = async ctx => {
 article.getMyArticle = async ctx => {
   const { nickName } = ctx.query
 
-  ctx.state.data = await mysql.select('*').from("articles").join('user', function () {
-    this.on('user.id', '=', 'articles.authorId').on('user.nickName', '=', `nickName`)
-  });
-}
-
-// get articles by username
-article.getMyArticle = async ctx => {
-  const { nickName } = ctx.query
-
-  ctx.state.data = await mysql.select('*').from("articles").join('user', function () {
+  ctx.state.data = await mysql.select('*').from("user").join('articles', function () {
     this.on('user.id', '=', 'articles.authorId').on('user.nickName', '=', `nickName`)
   });
 }
@@ -101,5 +92,22 @@ article.addReadingQuantity = async ctx => {
 article.getHotArticle = async ctx => {
   ctx.state.data = await mysql('articles').orderBy('reading_quantity', 'desc').limit(4)
 }
+
+// comment some article
+article.addComment = async ctx => {
+  const { commentValue, nickName, articleId } = ctx.request.body
+
+  const queryAuthorId = await mysql("user").where({ nickName }).select("*")
+  const authorId = queryAuthorId && queryAuthorId[0] && queryAuthorId[0].id
+  const currentTime = new Date().getTime()
+
+  ctx.state.data = await mysql('comment').insert({
+    comment_time: currentTime,
+    content: commentValue,
+    userId: authorId,
+    articleId
+  })
+}
+
 
 module.exports = article

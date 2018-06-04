@@ -19,12 +19,12 @@ Page({
       userInfo: appInstance.globalData.userInfo
     });
     const ind = options.id;
-    console.log(this.data.userInfo)
     var that = this;
     wx.request({
       url: config.service.finalUrl,
-      data: { ind },
+      data: { ind},
       success: function (res) {
+        console.log(res);
         that.setData({
           careerDetail: res.data.data
         })

@@ -2,7 +2,7 @@
   <view class="article-container">
     <view class="article-title">{{article.title}}</view>
     <view class='article-content'>{{article.content}}</view>
-    <view class='article-info'>{{article.publishTime}}  |  {{article.nickName}}发表</view>
+    <view class='article-info'>{{article.publishTime}} | {{article.nickName}}发表</view>
   </view>
 </view>
 
@@ -12,14 +12,14 @@
 
 <view class='discuss-area'>
   <view class='discuss-count'>{{commentList.length}}条评论</view>
-  <textarea class="discuss-content" placeholder="我也来说几句..."></textarea>
-  <button class="submit">发布</button>
+  <textarea class="discuss-content" placeholder="我也来说几句..." bindinput='inputComment'></textarea>
+  <button class="submit" bindtap="submitComment">发布</button>
 
   <view class='discuss-contents' wx:for="{{commentList}}">
     <view class='discuss-block'>
       <view class='main_top'>
         <view class='top_left'>
-          <image src="{{item.image}}"></image>
+          <image src="{{item.avatarUrl}}"></image>
         </view>
         <view class='top_right'>
           <view class='content_name'>{{item.nickName}}</view>
@@ -28,17 +28,5 @@
       </view>
       <view class='content_info'>{{item.content}}</view>
     </view>
-  </view>
-</view>
-
-<modal hidden="{{hiddenmodalput}}" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
-  <input type='text' name="shuru" placeholder="{{error}}" focus="{{focus}}" bindblur='input' />
-</modal>
-
-<view class="modal_box" hidden="{{modalFlag}}" bindtap="close">
-  <view class="modal">
-    <text id="commend">交流成功</text>
-    <text class="words">交流发布成功</text>
-    <text class="words">期待您下一次的讨论</text>
   </view>
 </view>

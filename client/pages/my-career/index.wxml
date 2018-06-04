@@ -1,13 +1,17 @@
-<view id="box">
-  <view class="career-panel">
-      <text class="panel-title">前端工程师</text>
-      <view class="content">
-        深圳资深前端工程师要求能力：node，vue，react，angular
-      </view>
+<view id="box" wx:for="{{jobsList}}">
+  <view class="career-panel" >
+    <text class="panel-title">内推编号：{{item.id}}</text>
+    <view class="content">
+     {{item.publish_type}}
+    </view>
+    <view class='content-info'>
       <view class="info">
-        求职状态:<view class="right info-success">成功</view>
+        能力要求：{{item.ability}}
       </view>
-      <text class="time">2018-02-27 18:00</text>
-  
+      <view class="right info-success">{{item.applyStatus}}</view>
+    </view>
+    <view class='bottom_info'>
+    <text class="time">申请时间: {{item.apply_time}}</text>
+    </view>
   </view>
 </view>

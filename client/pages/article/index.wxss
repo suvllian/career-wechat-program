@@ -58,12 +58,11 @@ page {
 
 .discuss-content {
   height: 100rpx;
-  width:90%;
+  width: 90%;
   margin: 30rpx auto;
   padding: 20rpx;
   border-radius: 3px;
   font-size: 26rpx;
-  color: #fff;
   background-color: #eee;
 }
 

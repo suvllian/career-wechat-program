@@ -59,7 +59,7 @@ page {
 .right {
   position: relative;
   font-size: 30rpx;
-  padding-left: 60rpx;
+  padding-left: 80rpx;
   top: -25rpx;
 }
 
