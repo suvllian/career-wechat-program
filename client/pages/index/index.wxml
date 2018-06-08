@@ -27,7 +27,8 @@
     <view class='box2'>
       <navigator wx:for="{{hotArticles}}" url="/pages/article/index?id={{item.id}}">
         <view class='list'>
-          <view class='tilte3'>{{index+1}}.{{item.title}} </view>
+          <view class='tilte3'>
+            <text class="ind">{{index+1}}.</text>{{item.title}} </view>
         </view>
       </navigator>
     </view>
@@ -41,30 +42,40 @@
     <view class='box2'>
       <view class='block2'>
         <view class='card'>
-          <view class='card_image_info'>
-            <image src='../../images/career1.jpg'></image>
-          </view>
-          <view class='card_text_info'>{{hotJobs[0].publish_type}}</view>
+          <navigator url="../../pages/publish-list/index?id={{hotJobs[0].publish_id}}"class='navclass'>
+            <view class='card_image_info'>
+              <image src='../../images/push1.png'></image>
+            </view>
+
+            <view class='card_text_info'>{{hotJobs[0].publish_type}}</view>
+          </navigator>
         </view>
         <view class='card'>
-          <view class='card_image_info'>
-            <image src='../../images/career2.jpg'></image>
-          </view>
-          <view class='card_text_info'>{{hotJobs[1].publish_type}}</view>
+          <navigator url="../../pages/publish-list/index?id={{hotJobs[1].publish_id}}"class='navclass'>
+            <view class='card_image_info'>
+              <image src='../../images/push2.png'></image>
+            </view>
+            <view class='card_text_info'>{{hotJobs[1].publish_type}}</view>
+          </navigator>
         </view>
       </view>
       <view class='block2'>
         <view class='card'>
-          <view class='card_image_info'>
-            <image src='../../images/career3.jpg'></image>
-          </view>
-          <view class='card_text_info'>{{hotJobs[2].publish_type}}</view>
+          <navigator url="../../pages/publish-list/index?id={{hotJobs[2].publish_id}}"class='navclass'>
+            <view class='card_image_info'>
+              <image src='../../images/push3.png'></image>
+            </view>
+            <view class='card_text_info'>{{hotJobs[2].publish_type}}</view>
+          </navigator>
         </view>
+
         <view class='card'>
-          <view class='card_image_info'>
-            <image src='../../images/career4.jpg'></image>
-          </view>
-          <view class='card_text_info'>{{hotJobs[3].publish_type}}</view>
+          <navigator url="../../pages/publish-list/index?id={{hotJobs[3].publish_id}}"class='navclass'>
+            <view class='card_image_info'>
+              <image src='../../images/push4.png'></image>
+            </view>
+            <view class='card_text_info'>{{hotJobs[3].publish_type}}</view>
+          </navigator>
         </view>
       </view>
     </view>

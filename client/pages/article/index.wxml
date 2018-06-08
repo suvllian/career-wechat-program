@@ -12,9 +12,8 @@
 
 <view class='discuss-area'>
   <view class='discuss-count'>{{commentList.length}}条评论</view>
-  <textarea class="discuss-content" placeholder="我也来说几句..." bindinput='inputComment'></textarea>
+  <textarea class="discuss-content" placeholder="我也来说几句..." bindinput='inputComment'value="{{commitInput?commentValue:''}}"></textarea>
   <button class="submit" bindtap="submitComment">发布</button>
-
   <view class='discuss-contents' wx:for="{{commentList}}">
     <view class='discuss-block'>
       <view class='main_top'>
@@ -24,9 +23,9 @@
         <view class='top_right'>
           <view class='content_name'>{{item.nickName}}</view>
           <view class='content_time'>{{item.comment_time}}</view>
+          <view class='content_info'>{{item.content}}</view>
         </view>
       </view>
-      <view class='content_info'>{{item.content}}</view>
     </view>
   </view>
 </view>

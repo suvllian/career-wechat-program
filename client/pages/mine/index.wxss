@@ -43,7 +43,7 @@
   padding: 22rpx;
   background-color: #fff;
   cursor: pointer;
-  font-size: 22rpx;
+  font-size: 28rpx;
 }
 
 .panel:nth-child(2n+1) {
@@ -106,7 +106,7 @@
 }
 
 .icon_font {
-  font-size: 24rpx;
+  font-size: 28rpx;
   width:24rpx;
   height:24rpx;
   vertical-align:middle;

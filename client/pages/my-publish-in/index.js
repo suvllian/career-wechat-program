@@ -6,9 +6,11 @@ Page({
     articles: []
   },
   onLoad: function (options) {
-  
-  },
-  onReady: function () {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      mask: true,
+    })
     this.getMyArticles()
   },
   getMyArticles: function() {
@@ -19,6 +21,7 @@ Page({
       url: config.service.getMyArticleUrl,
       data: { nickName },
       success: function (res) {
+        wx.hideLoading();
         that.setData({
           articles: res.data.data
         })

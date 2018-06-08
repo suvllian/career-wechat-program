@@ -15,6 +15,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      mask: true,
+    })
     this.setData({
       userInfo: appInstance.globalData.userInfo
     });
@@ -25,6 +30,7 @@ Page({
       data: { ind},
       success: function (res) {
         console.log(res);
+        wx.hideLoading();
         that.setData({
           careerDetail: res.data.data
         })

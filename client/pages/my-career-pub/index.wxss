@@ -120,3 +120,24 @@ page {
   background-color: transparent;
   opacity: 1;
 }
+.bg{
+  overflow:hidden;
+  height:1040rpx;
+}
+.bg image{
+  width:100%;
+  height:1200rpx;
+}
+.add-btn {
+  position: fixed;
+  bottom: 20rpx;
+  right: 28rpx;
+}
+
+.add-btn image {
+  width: 70rpx;
+  height: 70rpx;
+  background-color:#11B4AF;
+  border-radius: 50%;
+   padding:5rpx;
+}

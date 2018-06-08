@@ -44,7 +44,7 @@ Page({
 
     wx.request({
       method: 'POST',
-      url: `${config.service.addArticleUrl}`,
+      url: config.service.addArticleUrl,
       data: {
         articleTitle,
         articleContent,
@@ -64,8 +64,11 @@ Page({
       },
       fail: function (err) {
         console.log(err)
+        wx.showToast({
+          title: '请求失败',
+          icon: 'none'
+        })
       }
     })
-
   }
 })

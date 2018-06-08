@@ -7,33 +7,21 @@ Page({
     articleId: 0,
     article: {},
     commentList: [],
-    commentValue: ''
+    commentValue: '',
+    commitInput: false
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      mask: true,
+    })
     const { id: articleId } = options
-    // 获取文章内容
-    this.getContent(articleId)
-    // 获取评论内容
-    this.getComment(articleId)
-    this.addReadingQuantity(articleId)
 
+    this.getContent(articleId)
+    this.getComment(articleId)
     this.setData({
       articleId
-    })
-  },
-  // 增加文章阅读量
-  addReadingQuantity: function (id) {
-    wx.request({
-      url: `${config.service.addReadingQuantityUrl}?articleId=${id}`,
-      success: function (res) {
-        console.log(res)
-      },
-      fail: function (err) {
-        console.log(err)
-      }
     })
   },
   // 获取文章内容
@@ -47,7 +35,7 @@ Page({
         const { data } = res
         const article = data.data && data.data[0]
         article.publishTime = formatTime(article.publish_time)
-
+        wx.hideLoading();
         that.setData({
           article
         })
@@ -71,7 +59,7 @@ Page({
         const { data: commentList } = data
 
         commentList.forEach(item => item.comment_time = formatTime(item.comment_time))
-
+        wx.hideLoading();
         that.setData({
           commentList
         })
@@ -90,28 +78,45 @@ Page({
     const { commentValue, articleId } = this.data
     const { nickName } = appInstance.globalData.userInfo
     const that = this
-
+    that.setData({
+      commitInput: true
+    })
     if (!articleId) {
       return
     }
-
-    wx.request({
-      url: config.service.addCommentUrl,
-      method: 'POST',
-      data: {
-        articleId,
-        nickName,
-        commentValue
-      },
-      success: function (res) {
-        that.getComment(articleId)
-        that.setData({
-          commentValue: ''
-        })
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    })
-  }
+    if (commentValue) {
+      wx.request({
+        url: config.service.addCommentUrl,
+        method: 'POST',
+        data: {
+          articleId,
+          nickName,
+          commentValue
+        },
+        success: function (res) {
+          that.getComment(articleId)
+          wx.showModal({
+            content: '发布成功',
+            showCancel: false
+          });
+          that.setData({
+            commitInput: false
+          })
+        },
+        fail: function (err) {
+          console.log(err)
+        }
+      })
+    } else {
+      wx.showModal({
+        content: '评论不能为空！',
+        showCancel: false
+      })
+    }
+  },
+  onReady: function () {
+    setTimeout(function () {
+      
+    }, 1000)
+  },
 })

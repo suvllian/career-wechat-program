@@ -1,13 +1,6 @@
 const { mysql } = require("../qcloud.js")
+const { getCurrentDayStart } = require('../utils.js')
 const jobs = {}
-const getCurrentDayStart = () => {
-  const currentTime = new Date()
-  const year = currentTime.getFullYear()
-  const month = currentTime.getMonth()
-  const day = currentTime.getDate()
-
-  return new Date(`${year}-${month + 1}-${day}`).getTime()
-}
 
 // get jobs by profession
 jobs.getJobsByProfession = async ctx => {
@@ -63,7 +56,9 @@ jobs.getMyApplyList = async ctx => {
 
 // 
 jobs.getHotApplyList = async ctx => {
-  ctx.state.data = await await mysql('recommadation').orderBy('applyCount', 'desc').limit(4)
+  ctx.state.data = await mysql('recommadation').whereIn('id', function () {
+    this.min('id').from('recommadation').groupBy('publish_id');
+  }).orderBy('applyCount', 'desc').limit(4)
 }
 
 //获取我的内推列表
@@ -73,7 +68,7 @@ jobs.getMyPushes = async ctx => {
   id = id[0].id;
   var time = new Date();
   var recommand = await mysql("recommadation").where({ "author_id": id }).select("*");
-  
+
   ctx.state.data = recommand;
 }
 

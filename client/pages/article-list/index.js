@@ -5,38 +5,25 @@ Page({
     articles: []
   },
   onLoad:function(){
-    wx.showLoading({
+    wx.showToast({
       title: '加载中',
-      mask: true
+      icon: 'loading',
+      mask: true,
     })
   },
   onShow: function (options) {
+    wx.showLoading ()
     this.getArticles()
-  },
-  onReady: function () {
-    wx.hideLoading()
   },
   getArticles: function() {
     const that = this
 
     wx.request({
-      url: config.service.professionUrl,
-      success: function (res) {
-        console.log(res)
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    })
-
-    wx.request({
       url: config.service.articlesUrl,
       success: function (res) {
-        const { data } = res
-        // 按日期进行分类
-
+        wx.hideLoading();
         that.setData({
-          articles: data.data
+          articles: res.data.data
         })
       },
       fail: function (err) {

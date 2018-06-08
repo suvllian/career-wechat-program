@@ -34,8 +34,6 @@ var config = {
     specialArticleUrl: `${host}/weapp/specialArticle`,
     // 帖子评论内容
     getArticleCommentUrl: `${host}/weapp/getArticleComment`,
-    // 增加阅读量
-    addReadingQuantityUrl: `${host}/weapp/addReadingQuantity`,
     // 获取热门帖子
     getHotArticleUrl: `${host}/weapp/getHotArticle`,
     // 我的帖子
@@ -59,12 +57,12 @@ var config = {
     finalUrl: `${host}/weapp/getFinal`,
     // 获取职业名
     getCareerName: `${host}/weapp/getCareerName`,
-    
+
     //我的内推
     getMyPushesUrl: `${host}/weapp/getMyPushes`,
     //发布内推
     addPushesUrl: `${host}/weapp/addPushes`,
-  
+
   }
 };
 

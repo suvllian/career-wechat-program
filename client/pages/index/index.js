@@ -13,24 +13,30 @@ Page({
     industries: []
   },
   onLoad: function (options) {
-    var that = this;
-    wx.showLoading({
+    this.getIndustryList()
+    this.getHotArticle()
+    this.getHotApply()
+  },
+  onReady: function () {
+
+  },
+  getIndustryList() {
+    const that = this;
+    
+    wx.showToast({
       title: '加载中',
-      mask: true
-    });
+      icon: 'loading',
+      mask: true,
+    })
     wx.request({
       url: config.service.directionUrl,
       success: function (res) {
+        wx.hideLoading();
         that.setData({
           industries: res.data.data
         })
       }
     })
-    this.getHotArticle()
-    this.getHotApply()
-  },
-  onReady: function () {
-    wx.hideLoading()
   },
   // 获取热门帖子
   getHotArticle: function () {

@@ -44,14 +44,22 @@ Page({
     })
   },
   changeSuc: function () {
-    var that = this;
-    var { phone, name, userInfo } = this.data;
+    const that = this;
+    const { phone, name, userInfo } = this.data;
+
+    if (!phone || !name || !userInfo) {
+      wx.showToast({
+        title: '请填写完整的用户信息',
+        icon: 'none'
+      })
+      return
+    }
+
     wx.request({
       url: config.service.changeNameUrl,
       method: "POST",
       data: { phone, name, userInfo },
       success: function (res) {
-        console.log(res);
         that.setData({
           sessionFlag: false
         })
@@ -59,6 +67,11 @@ Page({
     })
   },
   onLoad: function (options) {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      mask: true,
+    })
     const baiscUserInfo = appInstance.globalData.userInfo
     const that = this
 
@@ -70,6 +83,7 @@ Page({
       success: function (res) {
         const { data = {} } = res
         const { data: userInfo = {} } = data
+        wx.hideLoading()
 
         that.setData({
           userInfo: baiscUserInfo,
@@ -86,5 +100,7 @@ Page({
     })
 
   },
+  onReady: function () {
 
+  }
 })

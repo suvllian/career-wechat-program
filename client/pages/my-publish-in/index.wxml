@@ -1,5 +1,5 @@
 <!--pages/anwser/anwser.wxml-->
-<view id="body">
+<view id="body"wx:if="{{articles.length>0}}">
   <view class="floor1" wx:for="{{articles}}" wx:key="{{index}}">
     <navigator url="/pages/article/index?id={{item.id}}">
       <view class="applebox">
@@ -11,8 +11,7 @@
       </view>
     </navigator>
   </view>
-
-  <view class="fix">
-    <image src="../../images/+.png" bindtap="publish" class="publish"></image>
-  </view>
+</view>
+<view wx:if="{{articles.length<=0}}"class="bg">
+    <image src="../../images/404.jpg"></image>
 </view>

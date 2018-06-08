@@ -1,8 +1,8 @@
-<view id="box" wx:for="{{jobsList}}">
-  <view class="career-panel" >
+<view id="box" wx:if="{{jobsList.length > 0}}" wx:for="{{jobsList}}">
+  <view class="career-panel">
     <text class="panel-title">内推编号：{{item.id}}</text>
     <view class="content">
-     {{item.publish_type}}
+      {{item.publish_type}}
     </view>
     <view class='content-info'>
       <view class="info">
@@ -11,7 +11,10 @@
       <view class="right info-success">{{item.applyStatus}}</view>
     </view>
     <view class='bottom_info'>
-    <text class="time">申请时间: {{item.apply_time}}</text>
+      <text class="time">申请时间: {{item.apply_time}}</text>
     </view>
   </view>
+</view>
+<view wx:if="{{jobsList.length <= 0}}" class="bg">
+  <image src="../../images/404.jpg"></image>
 </view>

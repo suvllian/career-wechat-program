@@ -1,6 +1,6 @@
-<view id="box" wx:for="{{ myPushesList}}">
+<view id="box"wx:if="{{myPushesList.length>0}}" wx:for="{{ myPushesList}}">
   <view class="career-panel">
-    <text class="panel-title">内推编号：6565656</text>
+    <text class="panel-title">内推编号：{{item.id}}</text>
     <view class="content">
       {{ item.publish_type}}
     </view>
@@ -14,4 +14,12 @@
       <text class="time">发布时间: {{item.publish_time}}</text>
     </view>
   </view>
+</view>
+<view wx:if="{{mypushesList.length<=0}}"class="bg">
+    <image src="../../images/404.jpg"></image>
+</view>
+<view class="add-btn">
+  <navigator url="/pages/my-publish-fabu/index" class='nav-bottom'>
+   <image src="../../images/+.png" mode=''></image>
+  </navigator>
 </view>

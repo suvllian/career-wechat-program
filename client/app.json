@@ -1,18 +1,18 @@
 {
   "pages": [
+    "pages/gate/index",
+    "pages/article-list/index",
     "pages/index/index",
     "pages/publish-list/index",
     "pages/my-publish-in/index",
     "pages/my-publish-fabu/index",
     "pages/career-details/index",
-    "pages/article-list/index",
-    "pages/gate/index",
+    "pages/article/index",
     "pages/person/index",
     "pages/career/index",
     "pages/questionnaire/index",
     "pages/mine/index",
     "pages/publish/index",
-    "pages/article/index",
     "pages/my-career/index",
     "pages/my-career-pub/index"
   ],

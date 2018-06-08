@@ -6,7 +6,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
   onLoad: function (options) {
-    
+
   },
   onReady: function () {
     this.bindGetUserInfo()
@@ -16,31 +16,29 @@ Page({
 
     wx.getSetting({
       success: function (res) {
-        if (res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: function (res) {
-              const { userInfo } = res;
-              console.log(userInfo);
-              appInstance.globalData.userInfo = userInfo
 
-              wx.request({
-                url: config.service.addUserUrl,
-                method: 'POST',
-                data: { users: userInfo },
-                success: function (res) {
-                  console.log(res);
-                },
-                fail: function () {
+        wx.getUserInfo({
+          success: function (res) {
+            const { userInfo } = res;
+            console.log(userInfo);
+            appInstance.globalData.userInfo = userInfo
 
-                }
-              })
+            wx.request({
+              url: config.service.addUserUrl,
+              method: 'POST',
+              data: { users: userInfo },
+              success: function (res) {
+                console.log(res);
+                wx.switchTab({
+                  url: '../../pages/index/index',
+                })
+              },
+              fail: function () {
 
-              wx.switchTab({
-                url: '../../pages/index/index',
-              })
-            }
-          })
-        }
+              }
+            })
+          }
+        })
       }
     })
   }

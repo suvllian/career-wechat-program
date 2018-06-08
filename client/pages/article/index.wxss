@@ -23,6 +23,7 @@ page {
 .article-content {
   min-height: 300rpx;
   padding: 30rpx 0;
+  text-indent: 1rem;
 }
 
 .article-info {
@@ -78,18 +79,21 @@ page {
 }
 
 .discuss-contents {
-  margin-top: 40rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom:2rpx solid #F5F5F5;
 }
-
 .main_top {
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .top_left image {
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 50rpx;
+  width: 70rpx;
+  height: 70rpx;
+  margin-top:10rpx;
+  border-radius: 50%;
 }
 
 .answer_hr {
@@ -97,15 +101,23 @@ page {
   margin: 40rpx 40rpx 40rpx 40rpx;
 }
 
+.top_left {
+  font-size: 30rpx;
+  float: left;
+}
+
 .top_right {
   font-size: 30rpx;
   margin-left: 30rpx;
   padding-top: 5rpx;
+  float: left;
+  width: 80%;
 }
 
 .content_time {
-  padding-top: 20rpx;
+  font-size: 22rpx;
   color: #878787;
+  margin:10rpx 0;
 }
 
 .tanchu {
@@ -117,9 +129,8 @@ page {
 
 .content_info {
   font-size: 30rpx;
-  margin-left: 130rpx;
-  margin-top: 15rpx;
   margin-bottom: 20rpx;
+  min-height: 45rpx;
 }
 
 .Sub_comments {
@@ -172,4 +183,8 @@ page {
   display: block;
   text-align: center;
   font-size: 32rpx;
+}
+
+.content_name {
+  text-align: left;
 }

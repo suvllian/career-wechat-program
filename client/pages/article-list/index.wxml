@@ -2,43 +2,37 @@
   <view wx:if="{{articles['today'].length > 0}}">
     <text class="date">今天</text>
     <view>
-      <view class="article-box" wx:for="{{articles['today']}}" wx:for-index="idx" wx:key="idx">
-        <navigator url="/pages/article/index?id={{item.id}}">
-          <view class="article-inner">
-            <text class="title">{{item.title}}</text>
-          </view>
-        </navigator>
-      </view>
+      <navigator class="article-box" wx:for="{{articles['today']}}" wx:for-index="idx" wx:key="idx" url="/pages/article/index?id={{item.id}}">
+        <view class="article-inner">
+          <text class="title">{{item.title}}</text>
+        </view>
+      </navigator>
     </view>
   </view>
   <view wx:if="{{articles['yesterday'].length > 0}}">
     <text class="date">昨天</text>
     <view>
-      <view class="article-box" wx:for="{{articles['yesterday']}}" wx:for-index="idx" wx:key="idx">
-        <navigator url="/pages/article/index?id={{item.id}}">
-          <view class="article-inner">
-            <text class="title">{{item.title}}</text>
-          </view>
-        </navigator>
-      </view>
+      <navigator class="article-box" wx:for="{{articles['yesterday']}}" wx:for-index="idx" wx:key="idx" url="/pages/article/index?id={{item.id}}">
+        <view class="article-inner">
+          <text class="title">{{item.title}}</text>
+        </view>
+      </navigator>
     </view>
   </view>
   <view wx:if="{{articles['twoDays'].length > 0}}">
     <text class="date">两天前</text>
     <view>
-      <view class="article-box" wx:for="{{articles['twoDays']}}" wx:for-index="idx" wx:key="idx">
-        <navigator url="/pages/article/index?id={{item.id}}">
-          <view class="article-inner">
-            <text class="title">{{item.title}}</text>
-          </view>
-        </navigator>
-      </view>
+      <navigator class="article-box" wx:for="{{articles['twoDays']}}" wx:for-index="idx" wx:key="idx" url="/pages/article/index?id={{item.id}}">
+        <view class="article-inner">
+          <text class="title">{{item.title}}</text>
+        </view>
+      </navigator>
     </view>
   </view>
 
 </view>
-<view class="add-btn">
-  <navigator url="/pages/publish/index" class='nav-bottom'>
+<navigator url="/pages/publish/index" class='nav-bottom'>
+  <view class="add-btn">
     <image src="../../images/+.png" mode=''></image>
-  </navigator>
-</view>
+  </view>
+</navigator>

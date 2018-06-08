@@ -1,4 +1,4 @@
-<view id="box" wx:for="{{jobsList}}">
+<view id="box"wx:if="{{jobsList.length>0}}" wx:for="{{jobsList}}">
   <view class="career-panel" >
     <text class="panel-title">职位编号：{{item.id}}</text>
     <view class="content">
@@ -19,6 +19,9 @@
 
 <view class="add-btn">
   <navigator url="/pages/my-publish-fabu/index" class='nav-bottom'>
-    <image src="../../images/+.png" mode=''></image>
+   <image src="../../images/+.png" mode=''></image>
   </navigator>
+</view>
+<view wx:if="{{jobsList.length<=0}}"class="bg">
+    <image src="../../images/404.jpg"></image>
 </view>

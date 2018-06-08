@@ -1,10 +1,8 @@
 <view class="person">
-
   <view id="person_box">
     <view class="a-box">
       <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
     </view>
-
     <view class="usrname">
       <view class="text">
         {{userInfo.nickName}}
@@ -14,26 +12,24 @@
   <view id="person_details">
     <view class="info-panel">
       <view>姓名</view>
-       <input bindblur="changeName" type="text"wx:if="{{sessionFlag}}"placeholder="请输入您的姓名"/>
-   <view wx:if="{{!sessionFlag}}"bindtap="changeFlag">
-            {{name?name:"点我修改"}}
-          </view>
+      <input bindblur="changeName" type="text" wx:if="{{sessionFlag}}" placeholder="请输入您的姓名" />
+      <view wx:if="{{!sessionFlag}}" bindtap="changeFlag">
+        {{name ? name:"点我修改"}}
+      </view>
     </view>
     <view class="info-panel">
       <view>手机号</view>
       <view>
-        <input bindblur="changePhone" type="text"wx:if="{{sessionFlag}}"placeholder="请输入您的手机号码" />
-          <view wx:if="{{!sessionFlag}}"bindtap="changeFlag">
-            {{phone?phone:"点我修改"}}
-          </view>
-        </view>          
+        <input bindblur="changePhone" type="text" wx:if="{{sessionFlag}}" placeholder="请输入您的手机号码" />
+        <view wx:if="{{!sessionFlag}}" bindtap="changeFlag">
+          {{phone ? phone:"点我修改"}}
+        </view>
+      </view>
     </view>
-
     <view class="info-panel">
       <view>性别</view>
       <view>{{userInfo.gender === 1 ? '男' : '女'}}</view>
     </view>
-   
-      <button wx:if="{{sessionFlag}}"bindtap="changeSuc">提交</button>
-      </view>
+    <button wx:if="{{sessionFlag}}" bindtap="changeSuc">提交</button>
+  </view>
 </view>
